@@ -1,0 +1,1196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>腾讯动漫</title>
+    <link rel="stylesheet" href="./css/reset.css" type="text/css">
+    <link rel="stylesheet" href="./css/index.css" type="text/css">
+    <link rel="shortcut icon" href="./images/favicons.ico">
+    <script src="./js/jquery-1.12.4.min.js"></script>
+    <script src="./js/JSONdate.js"></script>
+    <script src="./js/func.js"></script>
+</head>
+<body>
+    <!--模态框-->
+    <div class="mtk" id="mtk">
+        <div class="shadow"></div>
+        <div class="login">
+            <div class="login-box">
+                <a href="javascript:void(0)" id="close-box"></a>
+                <div class="login-title">账号密码登录</div>
+                <div class="login-remem">推荐使用<span>快速安全登录</span>，防止盗号</div>
+                <div class="nowei" id="nowei"></div>
+                <div class="login-input">
+                    <form>
+                        <input type="text" class="login-name" id="login-name" placeholder="请输入QQ号">
+                        <input type="password" class="login-pw" id="login-pw" placeholder="请输入密码">
+                        <button class="login-btn" id="login-btn">登录</button>
+                    </form>
+                </div>
+                <a class="sign">注册账号</a>
+            </div>
+        </div>
+    </div>
+    <!--登录验证方法-->
+    <script>
+        $(function(){
+            var pattern = /\d{5,11}/;
+            var seveId;
+            $('#login-btn').click(function(){
+                seveId = $('#login-name').val();
+                if(seveId == 10000 && $('#login-pw').val() == 10000){
+                    $('#mtk').hide();
+                    $('#small-login').hide();
+                    alert('登录成功!');
+                }else if(pattern.test(seveId) && $('#login-pw').val() != ''){
+                    $('#nowei').html('密码输入错误或账号不存在');
+                    return false;
+                }else if(!pattern.test(seveId) && $('#login-pw').val() != ''){
+                    $('#nowei').html('请输入正确的QQ号码');
+                    return false;
+                }else if($('#login-pw').val() == ''){
+                    $('#nowei').html('密码不能为空');
+                    return false;
+                }else if($('#login-name').val() == '') {
+                    $('#nowei').html('请输入QQ号');
+                    return false;
+                }
+            });
+            $('#login-name').focus(function(){
+                $('#nowei').html('');
+            });
+            $('#login-pw').focus(function(){
+                $('#nowei').html('');
+            });
+
+
+            $('#gomtk').click(function(){
+                $('#mtk').show();
+            });
+            $('#close-box').click(function(){
+                $('#mtk').hide();
+            })
+        });
+
+
+    </script>
+    <div id="container" class="container">
+        <!--顶部广告开始-->
+        <div class="top-advert" id="top-advert">
+            <!--广告大图片-->
+            <div class="advert-big">
+                <a href="#"><img src="images/0.jpg" alt="这里是广告"></a>
+            </div>
+        </div>
+        <div class="top-close">
+            <div class="top-close-sm">
+                <!--广告关闭小键-->
+                <div class="advert-close-span" id="advert-close-span">
+                    <span>关闭</span>
+                    <i class="close-before"></i>
+                </div>
+            </div>
+        </div>
+        <!--顶部广告js小效果-->
+        <script>
+            $(function(){
+                $('#advert-close-span').click(function(){
+                    $('#top-advert').slideToggle(500,sliToggle());
+                });
+            });
+        </script>
+        <!--顶部广告结束-->
+
+        <!--顶部悬挂导航栏开始-->
+        <div class="top-fix-nav" id="top-fix-nav">
+            <div class="top-fix-cont">
+                <!--左边导航栏-->
+                <ul class="top-fix-left" id="top-fix-left">
+                    <li class="active"><a href="#">首页</a></li>
+                    <li><a href="#">VIP动漫社</a></li>
+                    <li><a href="#">日漫</a></li>
+                    <li><a href="#">轻小说</a></li>
+                    <li><a href="#">福利社</a></li>
+                    <li><a href="#">资讯</a></li>
+                    <li><a href="#">排行榜</a></li>
+                </ul>
+                <!--右边搜索框-->
+                <div class="top-fix-right">
+                    <div class="fix-search-left">
+                        <input id="search-text" type="text">
+                        <label for="search-text" id="search-label">请输入作品名称</label>
+                    </div>
+                    <button class="search-right-btn"></button>
+                </div>
+            </div>
+        </div>
+        <!--顶部悬挂导航栏的js效果开始-->
+        <script>
+            $('#top-fix-left li').not($('#top-fix-left li')[0]).hover(function(){
+                $(this).addClass('active');
+            },function(){
+                $(this).removeClass('active');
+            });
+
+            $('#search-text').focus(function(){
+                $('#search-label').hide();
+            });
+            $('#search-text').blur(function(){
+                if($('#search-text').val()==''){
+                    $('#search-label').show();
+                }
+            });
+
+            $(window).scroll(function(){
+                if($(this).scrollTop()>275){
+                    $('#top-fix-nav').slideDown(500);
+                }else{
+                    $('#top-fix-nav').slideUp(500);
+                }
+            })
+        </script>
+        <!--顶部悬挂导航栏的js效果结束-->
+        <!--顶部悬挂导航栏结束-->
+
+        <!--侧边导航栏开始-->
+        <div class="fix-aside" id="fix-aside">
+            <ul>
+                <li><a href="javascript:void(0)">强档推荐</a></li>
+                <li><a href="javascript:void(0)">VIP</a></li>
+                <li><a href="javascript:void(0)">连载漫画</a></li>
+                <li><a href="javascript:void(0)">轻小说</a></li>
+                <li><a href="javascript:void(0)">优秀绘本</a></li>
+            </ul>
+            <a href="javascript:void(0)" class="go-top" id="go-top">顶部</a>
+        </div>
+        <!--侧边导航栏结束-->
+        <!--大方法开始-->
+        <script>
+            var flagTag = true;
+            $(function(){
+                $('#fix-aside ul li').eq(0).click(function(){
+                    scrollMove(830);
+                });
+                $('#fix-aside ul li').eq(1).click(function(){
+                    scrollMove(1170);
+                });
+                $('#fix-aside ul li').eq(2).click(function(){
+                    scrollMove(1595);
+                });
+                $('#fix-aside ul li').eq(3).click(function(){
+                    scrollMove(2085);
+                });
+                $('#fix-aside ul li').eq(4).click(function(){
+                    scrollMove(2460);
+                });
+                $('#go-top').click(function(){
+                    scrollMove(0);
+                });
+
+
+
+
+
+                $(window).scroll(function(){
+                    if($(this).scrollTop()<850){
+                        $('#fix-aside ul li').removeClass('active');
+                    }
+                    if($(this).scrollTop()>822 && $(this).scrollTop()<1151){
+                        $('#fix-aside ul li').eq(0).addClass('active').siblings().removeClass('active');
+                    }
+                    if($(this).scrollTop()>1151 && $(this).scrollTop()<1583){
+                        $('#fix-aside ul li').eq(1).addClass('active').siblings().removeClass('active');
+                    }
+                   if($(this).scrollTop()>1583 && $(this).scrollTop()<2075){
+                       $('#fix-aside ul li').eq(2).addClass('active').siblings().removeClass('active');
+                   }
+                    if($(this).scrollTop()>2075 && $(this).scrollTop()<2444){
+                        $('#fix-aside ul li').eq(3).addClass('active').siblings().removeClass('active');
+                    }
+                    if($(this).scrollTop()>2444){
+                        $('#fix-aside ul li').eq(4).addClass('active').siblings().removeClass('active');
+                    }
+                });
+                    //972 1301 1733 2225 2594
+            })
+        </script>
+        <!--大方法结束-->
+
+
+        <!--右边登录框开始-->
+        <div class="small-login" id="small-login">
+            <a href="javascript:void(0)" id="gomtk">
+                <img src="./images/top_face_no_bg.jpg">
+            </a>
+        </div>
+        <!--右边登录框结束-->
+
+
+
+
+        <!--顶部header开始-->
+        <div class="header">
+            <!--顶部header上边开始-->
+            <div class="header-top">
+                <!--顶部header上边左边开始-->
+                <div class="header-top-left">
+                    <h1>
+                        <a href="#">wa7chliang</a>
+                    </h1>
+                </div>
+                <!--顶部header上边左边结束-->
+
+                <!--顶部header上边中间开始-->
+                <div class="header-top-mid">
+                    <!--顶部header上边中间搜索框开始-->
+                    <div class="header-search">
+                        <div class="header-search-input">
+                            <label for="header-search-input" id="header-search-label">请输入作品名称</label>
+                            <input type="text" id="header-search-input">
+                        </div>
+                        <button class="header-search-btn"></button>
+                    </div>
+                    <!--顶部header上边中间搜索框结束-->
+
+                    <!--顶部header上边中间推荐开始-->
+                    <ul class="header-search-tag">
+                        <li><a href="#">神俑降临</a></li>
+                        <li><a href="#">万象融合起源</a></li>
+                        <li><a href="#">豪门第一盛婚</a></li>
+                        <li><a href="#">花牌情缘</a></li>
+                    </ul>
+                    <!--顶部header上边中间推荐结束-->
+                </div>
+                <!--顶部header上边中间结束-->
+                <!--搜索框小效果开始-->
+                <script>
+                    $('#header-search-input').focus(function(){
+                        $('#header-search-label').hide();
+                    });
+                    $('#header-search-input').blur(function(){
+                        if($('#header-search-input').val()==''){
+                            $('#header-search-label').show();
+                        }
+                    })
+                </script>
+                <!--搜索框小效果结束-->
+            </div>
+            <!--顶部header上边结束-->
+            <!--顶部header下边导航栏开始-->
+            <div class="header-bot">
+                <div class="header-bot-nav">
+                    <!--顶部header导航栏左边列表开始-->
+                    <ul class="header-nav-list" id="header-nav-list">
+                        <li class="active"><a href="#"><span>首页</span></a></li>
+                        <li><a href="#"><span>VIP动漫社</span></a></li>
+                        <li><a href="#"><span>日漫</span></a></li>
+                        <li><a href="#"><span>轻小说</span></a></li>
+                        <li><a href="#"><span>福利社</span><em class="nav-new"></em></a></li>
+                        <li><a href="#"><span>资讯</span></a></li>
+                        <li><a href="#"><span>动画</span></a></li>
+                        <li><a href="#"><span>排行榜</span></a></li>
+                        <li><a href="#"><span>个人中心</span></a></li>
+                        <li><a href="#"><span>手机版</span></a></li>
+                    </ul>
+                    <!--顶部header导航栏左边列表结束-->
+                    <!--导航栏js小效果开始-->
+                    <script>
+                       var $navLi = $('#header-nav-list li').not($('#header-nav-list li')[0]);
+                        $navLi.hover(function(){
+                            $(this).addClass('active');
+                        },function(){
+                            $(this).removeClass('active');
+                        })
+                    </script>
+                    <!--导航栏js小效果结束-->
+                    <!--顶部header导航栏右边列表开始-->
+                    <div class="header-nav-right">
+                        <div class="header-nav-r-left">
+                            <a href="#">作者追梦计划
+                                <em class="nav-new"></em>
+                            </a>
+                            <span>|</span>
+                            <a href="#">作品上传</a>
+                        </div>
+                        <!--里边右边两个小按钮开始-->
+                        <a href="#" class="header-nav-s-btn">
+                            <i></i>
+                            动漫VIP
+                        </a>
+                        <a href="#" class="header-nav-f-btn">
+                            <i></i>
+                            点券充值
+                        </a>
+                        <!--里边右边两个小按钮结束-->
+                    </div>
+                    <!--顶部header导航栏右边列表结束-->
+
+                </div>
+            </div>
+            <!--顶部header下边导航栏结束-->
+        </div>
+        <!--顶部header结束-->
+
+        <!--展示区域第一块开始-->
+        <div class="main-top-show">
+            <!--顶部展示区域开始-->
+            <div class="main-top-tag">
+                <!--顶部展示区域上边开始-->
+                <ul class="main-tag-top" id="main-tag-top">
+                    <li class="tag-top-red">
+                        <a href="#">【宇宙警探官网】</a>
+                    </li>
+                    <li class="tag-top-last">
+                        <a href="#">
+                            <i></i>全部分类</a>
+                    </li>
+                </ul>
+                <!--顶部展示区域上边结束-->
+                <!--遍历小方法开始-->
+                <script>
+                    var aTagLg = aTag.length;
+                    for(var i=0;i<aTag.length;i++){
+                        $('#main-tag-top').append('<li><a href="#">'+aTag[i]+'</a></li>');
+                    }
+                </script>
+                <!--遍历小方法结束-->
+
+                <!--顶部展示区域下边开始-->
+                <ul class="main-tag-bot" id="main-tag-bot">
+                    <li class="tag-bot-first">
+                        <span>独家动画</span>
+                    </li>
+                    <li>
+                        <a href="#" class="tag-bot-a" id="tag-bot-a0">超游世界</a>
+                        <!--hover显示的内容开始-->
+                        <div class="tag-bot-info" id="tag-bot-info0" style="display:none;">
+                            <span class="tag-info-ico"></span>
+                            <a href="#" class="tag-info-img">
+                                <!--1.图片链接-->
+                                <img src="images/tag-info01.jpg">
+                                <span class="info-ani-big">
+                                    <span class="info-ani-mes">第8集</span>
+                                </span>
+                            </a>
+                            <!--2.名字  更新内容-->
+                            <div class="tag-info-text1">
+                                <a href="#" class="tag-text1-left">超游世界</a>
+                                <a href="#" class="tag-text1-right">更新至8集</a>
+                            </div>
+                            <!--3.固定字体-->
+                            <div class="tag-info-text2">
+                                <p>播放量1,394.86万</p>
+                                <p>全部剧集</p>
+                            </div>
+                            <!--固定集数-->
+                            <ul class="tag-info-li" id="tag-info-li0"></ul>
+                        </div>
+                        <!--hover显示的内容结束-->
+                    </li>
+                </ul>
+                <!--顶部展示区域下边结束-->
+                <!--js遍历方法开始-->
+                <script>
+                    for(var i=0;i<10;i++){
+                        $('#main-tag-bot').append(
+                                '<li><a href="#" class="tag-bot-a" id="tag-bot-a'+(i+1)+
+                                '">' +tagInfo.aLeft[i]+
+                                '</a> <div class="tag-bot-info" id="tag-bot-info'+(i+1)+
+                                '" style="display:none;"> <span class="tag-info-ico"></span> <a href="#" class="tag-info-img"> <img src="images/tag-info0'+tagInfo.isrc[i]+
+                                '.jpg"> <span class="info-ani-big"> <span class="info-ani-mes">'+'第8集'+
+                                '</span> </span> </a> <div class="tag-info-text1"> <a href="#" class="tag-text1-left">'+tagInfo.aLeft[i]+'' +
+                                '</a> <a href="#" class="tag-text1-right">'+tagInfo.aRight+
+                                '</a> </div> <div class="tag-info-text2"> <p>播放量1,394.86万</p> <p>全部剧集</p> </div> <ul class="tag-info-li" id="tag-info-li'+(i+1)+
+                                '"></ul> </div></li>'
+                        )
+                    }
+                    for(var i=0;i<8;i++){
+                        $('#main-tag-bot li').children('div').children('ul').append('<li><a href="#">[0'+(i+1)+']</a></li>');
+                    }
+                    $('#main-tag-bot li:not(0)').hover(function(){
+                        $(this).children('div').show();
+                    },function(){
+                        $(this).children('div').hide();
+                    })
+                </script>
+                <!--js遍历方法结束-->
+            </div>
+            <!--顶部展示区域结束-->
+
+            <!--中间banner区域开始-->
+            <div class="main-banner">
+                <div class="main-blur-banner">
+                    <div class="main-view-banner" id="main-view-banner">
+                        <!--两个btn开始-->
+                        <a class="ban-left-btn" id="ban-left-btn"></a>
+                        <a class="ban-right-btn" id="ban-right-btn"></a>
+                        <!--两个btn结束-->
+                        <ul id="main-view-li">
+                            <li style="display:block">
+                                <a href="#" class="lunbof1">
+                                    <img src="./images/lunbof1.jpg">
+                                    <span class="lunbof1-name">
+                                        《DNF官方动画阿拉德宿命之门》
+                                        <span class="lunbof1-icon"></span>
+                                    </span>
+                                </a>
+                                <a href="#" class="lunbof2">
+                                    <img src="./images/lunbof2.jpg">
+                                    <span class="lunbof2-name">
+                                        《火影忍者》
+                                        <span class="lunbof2-icon"></span>
+                                    </span>
+                                </a>
+                                <a href="#" class="lunbof3">
+                                    <img src="./images/lunbof3.jpg">
+                                    <span class="lunbof3-name">
+                                        《超游世界日语版 第8集》
+                                        <span class="lunbof3-icon"></span>
+                                    </span>
+                                </a>
+                                <a href="#" class="lunbof4">
+                                    <img src="./images/lunbof4.jpg">
+                                    <span class="lunbof4-name">
+                                        《审判战区》
+                                        <span class="lunbof4-icon"></span>
+                                    </span>
+                                </a>
+                                <a href="#" class="lunbof5">
+                                    <img src="./images/lunbof5.jpg">
+                                    <span class="lunbof5-name">
+                                        《我要霸占你的吻》
+                                        <span class="lunbof5-icon"></span>
+                                    </span>
+                                </a>
+                            </li>
+                            <li style="display:none">
+                                <a href="#" class="lunbos1">
+                                    <img src="./images/lunbos1.jpg">
+                                    <span class="lunbos1-name">
+                                        《赤猫传》
+                                        <span class="lunbos1-icon"></span>
+                                    </span>
+                                </a>
+                                <a href="#" class="lunbos2">
+                                    <img src="./images/lunbos2.jpg">
+                                    <span class="lunbos2-name">
+                                        《脱团大作战》
+                                        <span class="lunbos2-icon"></span>
+                                    </span>
+                                </a>
+                                <a href="#" class="lunbos3">
+                                    <img src="./images/lunbos3.jpg">
+                                    <span class="lunbos3-name">
+                                        《颜值即正义》
+                                        <span class="lunbos3-icon"></span>
+                                    </span>
+                                </a>
+                                <a href="#" class="lunbos4">
+                                    <img src="./images/lunbos4.jpg">
+                                    <span class="lunbos4-name">
+                                        《星与铁》
+                                        <span class="lunbos4-icon"></span>
+                                    </span>
+                                </a>
+                                <a href="#" class="lunbos5">
+                                    <img src="./images/lunbos5.jpg">
+                                    <span class="lunbos5-name">
+                                        《鉴墓师》
+                                        <span class="lunbos5-icon"></span>
+                                    </span>
+                                </a>
+                            </li>
+                            <li style="display:none">
+                                <a href="#" class="lunbot1">
+                                    <img src="./images/lunbot1.jpg">
+                                    <span class="lunbot1-name">
+                                        《宇宙警探 第10集》
+                                        <span class="lunbot1-icon"></span>
+                                    </span>
+                                </a>
+                                <a href="#" class="lunbot2">
+                                    <img src="./images/lunbot2.jpg">
+                                    <span class="lunbot2-name">
+                                        《山田同学与七魔女》
+                                        <span class="lunbot2-icon"></span>
+                                    </span>
+                                </a>
+                                <a href="#" class="lunbot3">
+                                    <img src="./images/lunbot3.jpg">
+                                    <span class="lunbot3-name">
+                                        《我才不会对黑崎君说的话言听计从》
+                                        <span class="lunbot3-icon"></span>
+                                    </span>
+                                </a>
+                                <a href="#" class="lunbot4">
+                                    <img src="./images/lunbot4.jpg">
+                                    <span class="lunbot4-name">
+                                        《我太受欢迎了该怎么办》
+                                        <span class="lunbot4-icon"></span>
+                                    </span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <!--变色条开始-->
+                    <div class="main-view-lo" id="main-view-lo">
+                        <div class="main-control-lo" id="main-control-lo"></div>
+                    </div>
+                    <!--变色条结束-->
+                    <!--轮播图自创方法开始-->
+                    <script>
+                        var timerLo;
+                        var setp;
+                        var loColor = ['#5fa3ea','#f9ba49','#f1823a'];
+                        var loNum = 0;
+                        var loNe;
+                        clearInterval(timerLo);
+                        timerLo = setInterval(loStep,20);
+                        function loStep(){
+                            setp = $('#main-control-lo').width() + 2;
+                            $('#main-control-lo').width(setp);
+                            if($('#main-control-lo').width()==912) {
+                                if(loNum==2){
+                                    loNum=0;
+                                }else {
+                                    loNum++;
+                                }
+                                $('#main-view-li li').eq(loNum).show(800).siblings('li').hide(800);
+                                $('#main-view-lo').css({backgroundColor: loColor[loNum]});
+                                if (loNum == 2) {
+                                    loNum = -1;
+                                }
+                                $('#main-control-lo').width(0);
+                                $('#main-control-lo').css({backgroundColor: loColor[(loNum + 1)]});
+                            }
+                        }
+                        $('#main-view-banner').hover(function(){
+                            clearInterval(timerLo);
+                            $('#main-control-lo').width(0);
+                        },function(){
+                            timerLo = setInterval(loStep,20);
+                        });
+                        $('#ban-right-btn').click(function(){
+                            if(!$('#main-view-li li').eq(loNum).is(":animated")){
+                                if (loNum == 2){
+                                    loNum = 0;
+                                }else {
+                                    loNum++;
+                                }
+//                                console.log(loNum);
+                                $('#main-view-li li').eq(loNum).show(800).siblings('li').hide(800);
+                                $('#main-view-lo').css({backgroundColor: loColor[loNum]});
+                                if (loNum == 2) {
+                                    loNe = -1;
+                                }else{
+                                    loNe = loNum;
+                                }
+//                                console.log(loNum);
+                                $('#main-control-lo').css({backgroundColor: loColor[(loNe + 1)]});
+                            }
+
+                        });
+                        $('#ban-left-btn').click(function(){
+                            if(!$('#main-view-li li').eq(loNum).is(":animated")){
+                                if (loNum == 0){
+                                    loNum = 2;
+                                }else {
+                                    loNum--;
+                                }
+                                $('#main-view-li li').eq(loNum).show(800).siblings('li').hide(800);
+                                $('#main-view-lo').css({backgroundColor: loColor[loNum]});
+                                if (loNum == 2) {
+                                    loNe = -1;
+                                }else{
+                                    loNe = loNum;
+                                }
+                                $('#main-control-lo').css({backgroundColor: loColor[(loNe + 1)]});
+                            }
+                        })
+                    </script>
+                    <!--轮播图自创方法结束-->
+                </div>
+
+                <!--banner旁边右边区域开始-->
+                <div class="main-right-rank">
+                    <div class="right-rank-name">
+                        <h2>热门排行</h2>
+                        <ul class="right-rank-li" id="right-rank-li">
+                            <li class="active"><a href="javascript:void(0);">国漫</a></li>
+                            <li><a href="javascript:void(0);">日漫</a></li>
+                            <li><a href="javascript:void(0);">综合</a></li>
+                        </ul>
+                    </div>
+                    <div class="right-rank-show" id="right-rank-show">
+                        <div class="right-rank-tab1" style="display:block">
+                            <ol class="tab1-top10" id="tab1-top10"></ol>
+                            <ol class="tab1-top10 fr" id="tab1-top20"></ol>
+                        </div>
+                        <div class="right-rank-tab2" style="display:none">
+                            <ol class="tab1-top10" id="tab2-top10"></ol>
+                            <ol class="tab1-top10 fr" id="tab2-top20"></ol>
+                        </div>
+                        <div class="right-rank-tab3" style="display:none">
+                            <ol class="tab1-top10" id="tab3-top10"></ol>
+                            <ol class="tab1-top10 fr" id="tab3-top20"></ol>
+                        </div>
+                    </div>
+                    <!--js小方法开始-->
+                    <script>
+                        //第一个表格第一块遍历
+                        for(var i=0;i<8;i++){
+                            $('#tab1-top10').append('<li><sub class="rank-in-orange">'+(i+1)+
+                                    '</sub><a href="#">'+tab1TopE[i]+
+                                    '</a><i class="rankup"></i></li>');
+                            $('#tab1-top20').append('<li><sub class="rank-in-orange">'+(i+9)+
+                                    '</sub><a href="#">'+tab1TopS[i]+
+                                    '</a><i class="rankup"></i></li>');
+                            $('#tab2-top10').append('<li><sub class="rank-in-orange">'+(i+1)+
+                                    '</sub><a href="#">'+tab2TopE[i]+
+                                    '</a><i class="rankup"></i></li>');
+                            $('#tab2-top20').append('<li><sub class="rank-in-orange">'+(i+9)+
+                                    '</sub><a href="#">'+tab2TopS[i]+
+                                    '</a><i class="rankup"></i></li>');
+                            $('#tab3-top10').append('<li><sub class="rank-in-orange">'+(i+1)+
+                                    '</sub><a href="#">'+tab3TopE[i]+
+                                    '</a><i class="rankup"></i></li>');
+                            $('#tab3-top20').append('<li><sub class="rank-in-orange">'+(i+9)+
+                                    '</sub><a href="#">'+tab3TopS[i]+
+                                    '</a><i class="rankup"></i></li>');
+                        }
+                        $('#right-rank-li li').mouseover(function(){
+                            $(this).addClass('active').siblings('li').removeClass('active');
+                            $('#right-rank-show div').eq($(this).index()).show().siblings().hide();
+                        })
+
+                    </script>
+                    <!--js小方法结束-->
+                    <div class="right-rank-line"></div>
+                    <!--右边下面推荐列表开始-->
+                    <ul class="right-rank-recommend">
+                        <li>
+                            <i></i>
+                            <a href="#">赤猫传</a>
+                        </li>
+                        <li>
+                            <i></i>
+                            <a href="#">如梦令</a>
+                        </li>
+                        <li>
+                            <i></i>
+                            <a href="#">星与铁</a>
+                        </li>
+                        <li>
+                            <i></i>
+                            <a href="#">降灵记</a>
+                        </li>
+                    </ul>
+                    <!--右边下面推荐列表结束-->
+                </div>
+                <!--banner旁边右边区域结束-->
+
+            </div>
+            <!--中间banner区域结束-->
+
+        </div>
+        <!--展示区域第一块结束-->
+
+        <!--上边第二块小键开始-->
+        <div class="main-top-new">
+            <div class="top-new-left">
+                <dl>
+                    <dt class="new-title">近期动画</dt>
+                    <dd><p class="new-name">从前有座灵剑山 第24集</p>
+                        <span>03月24日更新</span>
+                        <p class="new-li">剧集：
+                            <a href="#">[5]</a>
+                            <a href="#">[4]</a>
+                            <a href="#">[3]</a>
+                            <a href="#">[2]</a>
+                            <a href="#">[1]</a>
+                        </p>
+                    </dd>
+                    <dd><p class="new-name">君临臣下 第14集</p>
+                        <span>03月22日更新</span>
+                        <p class="new-li">剧集：
+                            <a href="#">[5]</a>
+                            <a href="#">[4]</a>
+                            <a href="#">[3]</a>
+                            <a href="#">[2]</a>
+                            <a href="#">[1]</a>
+                        </p>
+                    </dd>
+                </dl>
+            </div>
+            <div class="top-new-left">
+                <dl>
+                    <dt class="new-title">近期动画</dt>
+                    <dd><p class="new-name">生死回放 第21集</p>
+                        <span>03月08日更新</span>
+                        <p class="new-li">剧集：
+                            <a href="#">[5]</a>
+                            <a href="#">[4]</a>
+                            <a href="#">[3]</a>
+                            <a href="#">[2]</a>
+                            <a href="#">[1]</a>
+                        </p>
+                    </dd>
+                    <dd><p class="new-name">宇宙警探 第10集</p>
+                        <span>02月05日更新</span>
+                        <p class="new-li">剧集：
+                            <a href="#">[5]</a>
+                            <a href="#">[4]</a>
+                            <a href="#">[3]</a>
+                            <a href="#">[2]</a>
+                            <a href="#">[1]</a>
+                        </p>
+                    </dd>
+                </dl>
+            </div>
+        </div>
+        <!--上边第二块小键结束-->
+
+        <!--上边第三块广告块开始-->
+        <div class="main-top-advert">
+            <a href="#">
+                <img src="./images/advert01.jpg" alt="">
+            </a>
+        </div>
+        <!--上边第三块广告块结束-->
+
+        <!--上边强档推荐开始-->
+        <div class="main-top-strong" id="main-top-strong">
+            <div class="strong-title-line">
+                <h3 class="title-name">
+                    强档<em>推荐</em>
+                </h3>
+                <!--要准备使用的选项卡-->
+                <div class="top-strong-btn" id="top-strong-btn">
+                    <a class="active" href="javascript:void(0);"></a>
+                    <a href="javascript:void(0);"></a>
+                    <a href="javascript:void(0);"></a>
+                </div>
+            </div>
+            <!--强档推荐显示内容开始-->
+            <div class="top-strong-show">
+                <ul class="strong-show-li" id="strong-show-li" style="left:0;">
+                    <li>
+                        <a href="#" class="strong-img-a">
+                            <!--遍历的图片-->
+                            <img src="./images/strong1.jpg">
+                            <p>
+                                <span>更新至99话</span>
+                            </p>
+                        </a>
+                        <!--遍历的名字-->
+                        <h5><a href="#">羞耻侠</a></h5>
+                        <!--遍历的内容-->
+                        <p class="strong-det">羞耻少年成侠之路</p>
+                        <p class="strong-det">
+                            <a href="#">搞笑</a>
+                            <a href="#">热血</a>
+                            <a href="#">校园</a>
+                        </p>
+                    </li>
+                </ul>
+                <!--遍历小方法开始-->
+                <script>
+                    for(var i=0;i<23;i++){
+                        $('#strong-show-li').append('<li> <a href="#" class="strong-img-a"> <img src="./images/strong'+strongLi.imgId[i]+'.jpg"> <p> <span>更新至99话</span> </p> </a> <h5><a href="#">'+strongLi.liName[i]+'</a></h5> <p class="strong-det">'+strongLi.liDet[i]+'</p> <p class="strong-det"> <a href="#">搞笑</a> <a href="#">热血</a> <a href="#">校园</a> </p> </li>')
+                    }
+                    $('#top-strong-btn a').click(function(){
+                        move($('#strong-show-li')[0],($(this).index())*(-1190));
+                        $(this).addClass('active').siblings().removeClass('active');
+                    });
+                </script>
+                <!--遍历小方法结束-->
+            </div>
+            <!--强档推荐显示内容开始-->
+        </div>
+        <!--上边强档推荐结束-->
+
+        <!--中间VIP动漫开始-->
+        <div class="main-mid-vip" id="main-mid-vip">
+            <!--中间vip动漫顶部开始-->
+            <div class="mid-vip-top">
+                <h2 class="mid-vip-name"></h2>
+                <div class="vip-top-li">
+                    <a href="#">玄幻·科幻</a>|
+                    <a href="#">都市·校园</a>|
+                    <a href="#">恐怖·悬疑</a>|
+                    <a href="#">少儿·生活</a>|
+                    <a href="#">海外·精品</a>
+                </div>
+                <a href="#" class="vip-top-enter">
+                    进入VIP动漫社
+                    <span></span>
+                </a>
+            </div>
+            <!--中间vip动漫顶部结束-->
+
+            <!--中间vip动漫第一块开始-->
+            <div class="mid-vip-first">
+                <!--左边-->
+                <div class="vip-first-left">
+                    <div class="vip-fl-top">
+                        <h3 class="vip-fl-name">强推作品</h3>
+                        <div class="vip-fl-tab" id="vip-fl-tab">
+                            <a href="javascript:void(0);" class="active">全部作品</a>
+                            <a href="javascript:void(0);">女生推荐</a>
+                        </div>
+                    </div>
+                    <!--遍历块1-->
+                    <div class="vip-fl-tab1" id="vip-fl-tab1">
+                        <ul class="strong-show-li" id="vip-fl-show"></ul>
+                    </div>
+                    <div class="vip-fl-tab1" id="vip-fl-tab2" style="display:none">
+                        <ul class="strong-show-li" id="vip-fl-show2"></ul>
+                    </div>
+
+                </div>
+                <!--js切换小方法开始-->
+                <script>
+                    for(var i=0;i<5;i++){
+                        $('#vip-fl-show').append('<li> <a href="#" class="strong-img-a"> <img src="./images/strong'+strongLi.imgId[i]+'.jpg"> <p> <span>更新至99话</span> </p> </a> <h5><a href="#">'+strongLi.liName[i]+'</a></h5> <p class="strong-det">'+strongLi.liDet[i]+'</p> <p class="strong-det"> <a href="#">搞笑</a> <a href="#">热血</a> <a href="#">校园</a> </p> </li>')
+                    }
+                    for(var i=10;i<15;i++){
+                        $('#vip-fl-show2').append('<li> <a href="#" class="strong-img-a"> <img src="./images/strong'+strongLi.imgId[i]+'.jpg"> <p> <span>更新至99话</span> </p> </a> <h5><a href="#">'+strongLi.liName[i]+'</a></h5> <p class="strong-det">'+strongLi.liDet[i]+'</p> <p class="strong-det"> <a href="#">搞笑</a> <a href="#">热血</a> <a href="#">校园</a> </p> </li>')
+                    }
+
+
+                    var tabBtn = [$('#vip-fl-tab1'),$('#vip-fl-tab2')];
+
+                    $('#vip-fl-tab a').mouseenter(function(){
+                        $(this).addClass('active').siblings().removeClass('active');
+                        tabBtn[$(this).index()].show().siblings('.vip-fl-tab1').hide();
+                    })
+                </script>
+                <!--js切换小方法结束-->
+
+                <!--右边-->
+                <div class="vip-first-right">
+                    <div class="vip-rank-top">
+                        <i></i>
+                        <h2>畅销榜</h2>
+                    </div>
+                    <ul class="vip-rank-list" id="vip-rank-list">
+                        <li>
+                            <div class="vip-rank-li">
+                                <em>1</em>
+                                <a href="#">斗破苍穹</a>
+                                <i></i>
+                            </div>
+                        </li>
+                        <li></li>
+                    </ul>
+                </div>
+                <!--遍历排行榜方法开始-->
+                <script>
+                    for(var i=0;i<7;i++){
+                        $('#vip-rank-list li').eq(0).append('<div class="vip-rank-li"> <em>'+(i+2)+'</em> <a href="#">'+tab1TopS[i]+'</a> <i></i> </div>');
+                    }
+                    for(var i=0;i<8;i++){
+                        $('#vip-rank-list li').eq(1).append('<div class="vip-rank-li"> <em>'+(i+9)+'</em> <a href="#">'+tab2TopE[i]+'</a> <i></i> </div>');
+                    }
+                </script>
+                <!--遍历排行榜方法结束-->
+
+
+            </div>
+            <!--中间vip动漫第一块结束-->
+
+            <!--中间vip动漫第二块开始-->
+            <div class="mid-vip-second" id="mid-vip-second">
+                <!--左边-->
+                <div class="vip-sec-left">
+                    <div class="vip-sec-title">
+                        <h3>连载表
+                        <em>不追连载不是真爱</em></h3>
+                    </div>
+                    <div class="vip-fl-tab1" id="vip-fl-tab2-1">
+                        <ul class="strong-show-li" id="vip-fl-show2-1"></ul>
+                    </div>
+                </div>
+                <!--遍历方法开始-->
+                <script>
+                    for(var i=17;i<22;i++){
+                        $('#vip-fl-show2-1').append('<li> <a href="#" class="strong-img-a"> <img src="./images/strong'+strongLi.imgId[i]+'.jpg"> <p> <span>更新至99话</span> </p> </a> <h5><a href="#">'+strongLi.liName[i]+'</a></h5> <p class="strong-det">'+strongLi.liDet[i]+'</p></li>')
+                    }
+                </script>
+                <!--遍历方法结束-->
+
+                <!--右边-->
+                <div class="vip-sec-right">
+                    <div class="vip-sec-title">
+                        <h3>漫社活动
+                            <em>活动天天有，快来勾搭吧</em></h3>
+                    </div>
+                    <div class="vip-sec-smm">
+                        <ul id="vip-sec-smm">
+                            <li style="display: block"><a href="#"><img src="./images/smlunbo1.jpg" alt=""></a></li>
+                            <li><a href="#"><img src="./images/smlunbo2.jpg" alt=""></a></li>
+                            <li><a href="#"><img src="./images/smlunbo3.jpg" alt=""></a></li>
+
+                        </ul>
+                    </div>
+                </div>
+                <!--微型轮播图开始-->
+                <script>
+                    var smNum = 0;
+                    var zI = 3;
+                    setInterval(function(){
+                        smNum ==2?smNum=0:smNum++;
+                        $('#vip-sec-smm li').eq(smNum).css('zIndex',zI++).show(1000,function(){
+                            $(this).siblings().hide();
+                        })
+                        $('#vip-sec-smm li').eq(smNum).css('zIndex',2).siblings().css('zIndex',1);
+                        zI=3;
+                    },7000);
+                </script>
+                <!--微型轮播图结束-->
+            </div>
+            <!--中间vip动漫第二块结束-->
+
+
+        </div>
+        <!--中间VIP动漫结束-->
+
+        <!--中间五合一广告开始-->
+        <div class="main-mid-adv">
+            <ul>
+                <li><a href="#"><img src="./images/adv1.jpg" alt=""></a></li>
+                <li><a href="#"><img src="./images/adv2.jpg" alt=""></a></li>
+                <li><a href="#"><img src="./images/adv3.jpg" alt=""></a></li>
+                <li><a href="#"><img src="./images/adv4.jpg" alt=""></a></li>
+                <li><a href="#"><img src="./images/adv5.jpg" alt=""></a></li>
+            </ul>
+        </div>
+        <!--中间五合一广告结束-->
+
+        <!--中间轻小说区域开始-->
+        <div class="main-mid-lnov" id="main-mid-lnov">
+            <div class="mid-lnov-title">
+                <h3>轻小说</h3>
+            </div>
+            <div class="mid-lnov-cont">
+                <div class="lnov-big-show">
+                    <div class="lnov-big-img">
+                        <a href="#">
+                            <!--图片数据-->
+                            <img src="./images/novb1.jpg" id="lnov-big-img">
+                        </a>
+                    </div>
+                </div>
+                <div class="lnov-cont-right">
+                    <!--上边数据变换内容-->
+                    <div class="lnov-data-cont">
+                        <div class="lnov-data-name">
+                            <h4 id="lnov-data-name">虚空之盒与零之麻理亚</h4>
+                            <sub class="star"></sub>
+                            <sub class="score">7.5</sub>
+                            <a href="#">更多</a>
+                        </div>
+                        <p class="lnov-cont-char">
+                            <a href="#" id="lnov-cont-char">三月，在这半吊子的时期到来的转学生──音无彩矢，在被她惊人的美貌所震慑的教室里，她站上了讲台，仅冷淡地道出了自己的姓名。整个教室都在等待她的下一句话，此时的她却不知为何叫出了星野一辉的名字，</a>
+                        </p>
+                    </div>
+                    <div class="lnov-data-li" id="lnov-data-li">
+                        <ul>
+                            <li class="active"><a href="#"><img src="./images/novs1.jpg"></a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--遍历方法开始-->
+        <script>
+            var novNum;
+            for(var i=0;i<7;i++){
+                $('#lnov-data-li ul').append('<li><a href="xiana.html"><img src="./images/novs'+(i+2)+'.jpg"></a></li>');
+            }
+            $('#lnov-data-li ul li').mouseenter(function(){
+                novNum=$(this).index();
+                $(this).addClass('active').siblings().removeClass('active');
+                $('#lnov-data-name').html(nov.novName[novNum]);
+                $('#lnov-cont-char').html(nov.novli[novNum]);
+                $('#lnov-big-img')[0].src = './images/novb'+(novNum+1)+'.jpg';
+            });
+
+        </script>
+        <!--遍历方法结束-->
+        <!--中间轻小说区域结束-->
+
+        <!--底部最后第二块区域开始-->
+        <div class="last-section" id="last-section">
+            <div class="l-sec-left">
+                <div class="lsec-left-title">
+                    <h3>优秀<em>绘本</em></h3>
+                    <a href="#">更多</a>
+                </div>
+                <div class="lsec-left-cont">
+                    <div class="left-cont-ani">
+                        <ul>
+                            <li class="ani-row1">
+                                <div class="row1-img1">
+                                    <a href="#"><img src="./images/fo1.png"></a>
+                                    <a href="#" class="img-info">
+                                        <h5>凯瑟琳的环游日记</h5>
+                                        <h6>作者：制帽匠</h6>
+                                        <p>简介：一位少女，一个机器人，一场环球旅行。</p>
+                                    </a>
+                                </div>
+                            </li>
+                            <li class="ani-row2">
+                                <div class="row1-img1">
+                                    <a href="#"><img src="./images/fo2.png"></a>
+                                    <a href="#" class="img-info">
+                                        <h5>PanPan便利店</h5>
+                                        <h6>作者：黑白格仔君</h6>
+                                        <p>简介：暖心的便利店日常</p>
+                                    </a>
+                                </div>
+                                <div class="row1-img1">
+                                    <a href="#"><img src="./images/fo3.png"></a>
+                                    <a href="#" class="img-info">
+                                        <h5>糊涂教室</h5>
+                                        <h6>作者：木子是个球儿</h6>
+                                        <p>简介：减压漫画小教程</p>
+                                    </a>
+                                </div>
+                            </li>
+                            <li class="ani-row3">
+                                <div class="row1-img1">
+                                    <a href="#"><img src="./images/fo4.png"></a>
+                                    <a href="#" class="img-info">
+                                        <h5>你好，小雷君！</h5>
+                                        <h6>作者：有喵小姐</h6>
+                                        <p>简介：有了猫就是不一样</p>
+                                    </a>
+                                </div>
+                            </li>
+                            <li class="ani-row4">
+                                <div class="row1-img1">
+                                    <a href="#"><img src="./images/fo5.png"></a>
+                                    <a href="#" class="img-info">
+                                        <h5>小桃额娘</h5>
+                                        <h6>作者：小桃额娘</h6>
+                                        <p>简介：麻麻的日常教学</p>
+                                    </a>
+                                </div>
+                                <div class="row1-img1">
+                                    <a href="#"><img src="./images/fo6.png"></a>
+                                    <a href="#" class="img-info">
+                                        <h5>妖怪列传</h5>
+                                        <h6>作者：镭暴漫画</h6>
+                                        <p>简介：揭开神秘的上古神兽的面纱</p>
+                                    </a>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <!--隐藏显示方法开始-->
+            <script>
+                $('.row1-img1').hover(function(){
+                    $(this).children('.img-info').fadeIn(500);
+                },function(){
+                    $(this).children('.img-info').fadeOut(500);
+                });
+            </script>
+            <!--隐藏显示方法结束-->
+
+            <!--下面的谈话框开始-->
+            <div class="last-sec-talk" id="last-sec-talk">
+                <h3>热门话题</h3>
+                <ul>
+                    <li>
+                        <a href="#" class="talk-title">
+                            <strong>【日常】第一次</strong>
+                        </a>
+                        <div class="talk-cont">
+                            <a href="#">
+                                <p>第一次当摄影好紧张哦～摄影：鳗鱼霏儿出镜：大肉丸...</p>
+                            </a>
+                        </div>
+                        <div class="talk-back">
+                            <span>回复数:16</span>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <!--下面的谈话框结束-->
+
+            <!--js遍历以及方法开始-->
+            <script>
+                for(var i=0;i<6;i++){
+                    $('#last-sec-talk ul').append('<li> <a href="#" class="talk-title"> <strong>'+talkShow.talkName[i]+'</strong> </a> <div class="talk-cont"> <a href="#"> <p>'+talkShow.talkCont[i]+'</p> </a> </div> <div class="talk-back"> <span>回复数:'+talkShow.talkBack[i]+'</span> </div> </li>');
+                }
+                setInterval(function(){
+                    $('#last-sec-talk ul li').last().hide().insertBefore($('#last-sec-talk ul li:eq(0)')).fadeIn(1000);
+                },3500);
+
+
+            </script>
+            <!--js遍历以及方法结束-->
+
+
+        </div>
+        <!--底部最后第二块区域结束-->
+
+        <!--最后一块广告块开始-->
+        <div class="main-top-advert">
+            <a href="#">
+                <img src="./images/0.jpg" alt="">
+            </a>
+        </div>
+        <!--最后一块广告块结束-->
+
+
+        <!--底部开始-->
+        <div class="footer">
+            <div class="footer-main">
+                <div class="footer-main-cont">
+                    <!--底部二维码开始-->
+                    <ul class="footer-main-scan">
+                        <li>
+                            <img src="./images/ac_qr_img.jpg">
+                            <p>腾讯动漫客户端</p>
+                        </li>
+                        <li>
+                            <img src="./images/ac_wx_img.jpg">
+                            <p>腾讯动漫微信</p>
+                        </li>
+                    </ul>
+                    <!--底部二维码结束-->
+                    <p class="footer-info">
+                        <a href="#">网站地图</a>
+                        <a href="#">站内帮助</a>
+                        <a href="#">反馈通道</a>
+                        <a href="#">官方微博</a>
+                        <a href="#">邮箱推荐</a>
+                        <a href="#">服务协议</a>
+                        <a href="#">侵权反馈指引</a>
+                        <span><a href="#">wa7chliang@163.com</a></span>
+                    </p>
+                    <p class="footer-info">
+                        Copyright<span>©</span>
+                        1998 - 2017 Tencent. All Rights Reserved
+                    </p>
+                    <p class="footer-info">
+                        腾讯公司 版权所有
+                    </p>
+
+
+                </div>
+            </div>
+            <div class="footer-border"></div>
+        </div>
+        <!--底部结束-->
+
+
+
+
+    </div>
+</body>
+</html>

@@ -1,0 +1,808 @@
+@max-width:100%;
+
+//中间vip动漫开始
+.main-mid-vip{
+    width: 1200px;
+    margin: 0 auto;
+    position: relative;
+    padding-top: 20px;
+    margin-bottom:40px;
+    //中间vip动漫顶部
+    .mid-vip-top{
+        height: 57px;
+        border-radius:2px;
+        background:#efefef;
+        .mid-vip-name{
+            float: left;
+            background:url("../images/in_sprite.png")no-repeat -541px -361px;
+            display: block;
+            width: 150px;
+            height: 57px;
+            line-height: 57px;
+            font-size:24px;
+            text-align:center;
+            padding-right: 9px;
+        }
+        .vip-top-li{
+            float: left;
+            height: 18px;
+            padding-top: 19px;
+            padding-left: 12px;
+            font-size:12px;
+            a{
+                font-size:14px;
+                color:#666;
+                margin: 0 6px;
+                &:hover{
+                    text-decoration: underline;
+                }
+            }
+        }
+        .vip-top-enter{
+            float: right;
+            width: 132px;
+            color:#333;
+            padding-top: 17px;
+            padding-right: 10px;
+            font-size:16px;
+            line-height:22px;
+            position: relative;
+            &:hover{
+                text-decoration:underline;
+            }
+            span{
+                background:url("../images/in_sprite.png")no-repeat -424px -123px;
+                width: 15px;
+                height: 14px;
+                display: block;
+                position: absolute;
+                right: 18px;
+                top: 21px;
+            }
+        }
+        &::after{
+            content: '';
+            display: block;
+            clear: both;
+        }
+    }
+
+    //ViP的第一块
+    .mid-vip-first{
+        overflow:hidden;
+        //左边
+        .vip-first-left{
+            float: left;
+            width: 760px;
+            position: relative;
+            font-size:12px;
+            .vip-fl-top{
+                padding-top: 16px;
+                .vip-fl-name{
+                    height: 29px;
+                    line-height: 29px;
+                    float: left;
+                    font-size:20px;
+                    color:#333;
+                    margin-right: 20px;
+                    font-weight:normal;
+                }
+                .vip-fl-tab{
+                    float: left;
+                    .active{
+                        background:#ff9a6a;
+                        color:#fff;
+                        font-weight:800;
+                        border-radius:3px;
+                    }
+                    a{
+                        float: left;
+                        width: 77px;
+                        height: 29px;
+                        display: block;
+                        line-height: 29px;
+                        font-size:14px;
+                        margin-right: 6px;
+                        text-align:center;
+                        color:#666;
+                    }
+                }
+                &::after{
+                    content:'';
+                    display: block;
+                    clear: both;
+                }
+            }
+        }
+        //遍历块1
+        .vip-fl-tab1{
+            width: 760px;
+            position: relative;
+            padding-top: 22px;
+            //与之前的一样的方法
+            .strong-show-li{
+                padding:10px;
+                position: absolute;
+                left:0;
+                overflow: hidden;
+                li{
+                    float: left;
+                    margin-right:12px;
+                    width: 135px;
+                    overflow: hidden;
+                    .strong-img-a{
+                        width: 133px;
+                        border:1px solid #bebebe;
+                        display: block;
+                        position: relative;
+                        p{
+                            position: absolute;
+                            width: @max-width;
+                            height: 22px;
+                            bottom: 0;
+                            left: 0;
+                            background:rgba(0,0,0,.6);
+                            display: block;
+                            span{
+                                font-size:12px;
+                                color:#fff;
+                                float: right;
+                                line-height: 22px;
+                                padding:0 10px;
+                            }
+                        }
+                        &:hover{
+                            border-color:orange;
+                        }
+                    }
+                    h5{
+                        font-weight: normal;
+                        margin-top:4px;
+                        a{
+                            font-size:14px;
+                            color:#333;
+                            &:hover{
+                                color:orange;
+                            }
+                        }
+                    }
+                    .strong-det{
+                        color:#999;
+                        height: 22px;
+                        line-height: 22px;
+                        font-size:13px;
+                        a{
+                            &:hover{
+                                color:orange;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        //右边
+        .vip-first-right{
+            float: right;
+            width: 400px;
+            padding-top: 10px;
+            .vip-rank-top{
+                position: relative;
+                background: #ec5245;
+                height: 43px;
+                line-height: 43px;
+                padding:0 13px;
+                border-radius:3px;
+                i{
+                    position: absolute;
+                    top: -8px;
+                    left: 12px;
+                    display: block;
+                    width: 40px;
+                    height: 49px;
+                    background:url("../images/in_sprite.png")no-repeat 0 -864px;
+                }
+                h2{
+                    float: left;
+                    padding-left:43px;
+                    color:#fff;
+                    font-size:20px;
+                    font-weight:normal;
+                    line-height: 43px;
+                }
+                &::after{
+                    content:'';
+                    display: block;
+                    clear: both;
+                }
+            }
+            .vip-rank-list{
+                width: 400px;
+                li{
+                    float: left;
+                    width: 198px;
+                    padding-top:10px;
+                    padding-left: 2px;
+                    .vip-rank-li{
+                        padding-top:4px;
+                        padding-bottom: 4px;
+                        line-height: 24px;
+                        overflow:hidden;
+                        em{
+                            margin-top: 5px;
+                            margin-right: 14px;
+                            font-size:12px;
+                            font-style:normal;
+                            height:14px;
+                            line-height:14px;
+                            text-align:center;
+                            width:14px;
+                            color:#fff;
+                            background: #ec5245;
+                            display: block;
+                            float: left;
+                        }
+                        a{
+                            color:#333;
+                            font-size:12px;
+                            float: left;
+                            &:hover{
+                                color:orange;
+                            }
+                        }
+                        i{
+                            width: 5px;
+                            height: 6px;
+                            display: block;
+                            float: right;
+                            margin-top: 6px;
+                            background:url("../images/ac_global.png")no-repeat -192px -200px;
+                        }
+
+                    }
+                }
+            }
+            &::after{
+                content:'';
+                display: block;
+                clear: both;
+            }
+        }
+    }
+
+    //vip的第二块
+    .mid-vip-second{
+        width: 1200px;
+        margin: 0 auto;
+        margin-top: 36px;
+        margin-bottom: 40px;
+        overflow: hidden;
+        //左边
+        .vip-sec-left{
+            width: 760px;
+            float: left;
+            position: relative;
+            font-size:12px;
+            .vip-sec-title{
+                height: 30px;
+                h3{
+                    height: 26px;
+                    line-height: 26px;
+                    font-weight:normal;
+                    font-size:30px;
+                    color:#333;
+                    em{
+                        font-style: normal;
+                        font-size:16px;
+                        color:#ff9a6a;
+                        padding-left:7px;
+                    }
+                }
+                &::after{
+                    content:'';
+                    display: block;
+                    clear: both;
+                }
+            }
+            //遍历块方法
+            .vip-fl-tab1{
+                width: 760px;
+                position: relative;
+                padding-top: 20px;
+                //与之前的一样的方法
+                .strong-show-li{
+                    padding:10px;
+                    position: absolute;
+                    left:0;
+                    overflow: hidden;
+                    li{
+                        float: left;
+                        margin-right:12px;
+                        width: 135px;
+                        overflow: hidden;
+                        .strong-img-a{
+                            width: 133px;
+                            border:1px solid #bebebe;
+                            display: block;
+                            position: relative;
+                            p{
+                                position: absolute;
+                                width: @max-width;
+                                height: 22px;
+                                bottom: 0;
+                                left: 0;
+                                background:rgba(0,0,0,.6);
+                                display: block;
+                                span{
+                                    font-size:12px;
+                                    color:#fff;
+                                    float: right;
+                                    line-height: 22px;
+                                    padding:0 10px;
+                                }
+                            }
+                            &:hover{
+                                border-color:orange;
+                            }
+                        }
+                        h5{
+                            font-weight: normal;
+                            margin-top:4px;
+                            a{
+                                font-size:14px;
+                                color:#333;
+                                &:hover{
+                                    color:orange;
+                                }
+                            }
+                        }
+                        .strong-det{
+                            color:#999;
+                            height: 22px;
+                            line-height: 22px;
+                            font-size:13px;
+                            a{
+                                &:hover{
+                                    color:orange;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        //右边
+        .vip-sec-right{
+            float: right;
+            width: 400px;
+            .vip-sec-title{
+                height: 30px;
+                h3{
+                    height: 26px;
+                    line-height: 26px;
+                    font-weight:normal;
+                    font-size:30px;
+                    color:#333;
+                    em{
+                        font-style: normal;
+                        font-size:16px;
+                        color:#ff9a6a;
+                        padding-left:7px;
+                    }
+                }
+                &::after{
+                    content:'';
+                    display: block;
+                    clear: both;
+                }
+            }
+            .vip-sec-smm{
+                height: 226px;
+                border:1px solid #bebebe;
+                margin-top: 22px;
+                overflow: hidden;
+                position: relative;
+                li{
+                    position: absolute;
+                    display:none;
+                }
+            }
+        }
+    }
+
+
+}
+//中间vip动漫结束
+
+//中间五合一广告开始
+.main-mid-adv{
+    width: 1200px;
+    height: 100px;
+    margin: 0 auto;
+    padding:16px 0;
+    background: #535353;
+    overflow:hidden;
+    margin-bottom:40px;
+    li{
+        float: left;
+        margin-left: 15px;
+        border: 1px solid #393939;
+        &:hover{
+            border-color:orange;
+        }
+    }
+}
+//中间五合一广告结束
+
+//中间轻小说区域开始
+.main-mid-lnov{
+    width: 1200px;
+    margin: 0 auto;
+    margin-bottom: 40px;
+    font-size:12px;
+    .mid-lnov-title{
+        margin-bottom: 15px;
+        h3{
+            font-size:30px;
+            line-height:30px;
+            font-weight:normal;
+            color:rgb(85,85,85);
+        }
+    }
+    .mid-lnov-cont{
+        margin-bottom:40px;
+        overflow: hidden;
+        .lnov-big-show{
+            float: left;
+            width: 214px;
+            height: 284px;
+            .lnov-big-img{
+                width: 215px;
+                height: 284px;
+                padding:1px 0 0 1px;
+                background:url("../images/in_sprite.png")no-repeat 0 -123px;
+                overflow:hidden;
+            }
+        }
+        .lnov-cont-right{
+            width: 966px;
+            float: right;
+            .lnov-data-cont{
+                width: 598px;
+                height: 104px;
+                display: block;
+                margin-bottom: 17px;
+                .lnov-data-name{
+                    h4{
+                        font-weight:normal;
+                        font-size:18px;
+                        color:rgb(85,85,85);
+                        float: left;
+                    }
+                    .star{
+                        float: left;
+                        display: block;
+                        width: 121px;
+                        height: 18px;
+                        background:url("../images/ac_star_bg.png")no-repeat 0 -140px;
+                        margin-left: 15px;
+                    }
+                    .score{
+                        float: left;
+                        display: block;
+                        padding-left: 10px;
+                        font-size:16px;
+                        font-weight: 800;
+                        color:#ff9a6a;
+                    }
+                    a{
+                        color:rgb(51,51,51);
+                        font-size:16px;
+                        float: right;
+                        &:hover{
+                          color:orange;
+                        }
+                    }
+
+                    &::after{
+                        content:'';
+                        display: block;
+                        clear: both;
+                    }
+                }
+                .lnov-cont-char{
+                    float: left;
+                    margin-top:20px;
+                    a {
+                        color: #666;
+                    }
+                }
+            }
+            .lnov-data-li{
+                width: 966px;
+                height: 162px;
+                .active{
+                    border-color:#ff9a6a;
+                }
+                li{
+                    width: 100px;
+                    height: 158px;
+                    border:1px solid #eeeded;
+                    margin-right: 18px;
+                    float: left;
+                    img{
+                        width: 100px;
+                        height: 158px;
+                    }
+                }
+            }
+        }
+    }
+}
+//中间轻小说区域结束
+
+//最后一个主要内容区域开始
+.last-section{
+    width: 1200px;
+    margin: 0 auto;
+    margin-bottom:40px;
+    overflow: hidden;
+    .l-sec-left{
+        float: left;
+        width: 916px;
+        .lsec-left-title{
+            margin-bottom:20px;
+            width: 916px;
+            h3{
+                display: block;
+                color:rgb(85,85,85);
+                font-weight:normal;
+                font-size:30px;
+                float: left;
+                em{
+                    font-size:24px;
+                    font-style:normal;
+                    color:rgb(255,154,106);
+                }
+            }
+            a{
+                float: right;
+                color:rgb(51,51,51);
+                font-size:16px;
+                &:hover{
+                    color:orange;
+                }
+            }
+            &::after{
+                content:'';
+                clear: both;
+                display: block;
+            }
+        }
+        .lsec-left-cont{
+            float: left;
+            .left-cont-ani{
+                width: 916px;
+                height: 264px;
+                position: relative;
+                .ani-row1{
+                    width: 299px;
+                    float: left;
+                    //方法
+                    .row1-img1{
+                        width: @max-width;
+                        height: @max-width;
+                        position: relative;
+                        .img-info{
+                            display: none;
+                            position: absolute;
+                            width: @max-width;
+                            height: @max-width;
+                            color:#fff;
+                            background:#ff9a6a;
+                            left: 0;
+                            top: 0;
+                            opacity:.7;
+                            filter: alpha(opacity=70);
+                            h5{
+                                padding-top: 14px;
+                                padding-left: 14px;
+                            }
+                            h6{
+                                padding-bottom:5px;
+                                padding-left:14px;
+                                font-weight:800;
+                            }
+                            p{
+                                padding-left: 14px;
+                                font-size:12px;
+                            }
+                        }
+                    }
+                }
+                .ani-row2{
+                    width: 292px;
+                    float: left;
+                    //方法
+                    .row1-img1{
+                        width: @max-width;
+                        height: @max-width;
+                        position: relative;
+                        .img-info{
+                            display: none;
+                            position: absolute;
+                            width: @max-width;
+                            height: @max-width;
+                            color:#fff;
+                            background:#ff9a6a;
+                            left: 0;
+                            top: 0;
+                            opacity:.7;
+                            filter: alpha(opacity=70);
+                            h5{
+                                padding-top: 14px;
+                                padding-left: 14px;
+                            }
+                            h6{
+                                padding-bottom:5px;
+                                padding-left:14px;
+                                font-weight:800;
+                            }
+                            p{
+                                padding-left: 14px;
+                                font-size:12px;
+                            }
+                        }
+                    }
+                }
+                .ani-row3{
+                    width: 169px;
+                    float: left;
+                    //方法
+                    .row1-img1{
+                        width: @max-width;
+                        height: @max-width;
+                        position: relative;
+                        .img-info{
+                            display: none;
+                            position: absolute;
+                            width: @max-width;
+                            height: @max-width;
+                            color:#fff;
+                            background:#ff9a6a;
+                            left: 0;
+                            top: 0;
+                            opacity:.7;
+                            filter: alpha(opacity=70);
+                            h5{
+                                padding-top: 14px;
+                                padding-left: 14px;
+                            }
+                            h6{
+                                padding-bottom:5px;
+                                padding-left:14px;
+                                font-weight:800;
+                            }
+                            p{
+                                padding-left: 14px;
+                                font-size:12px;
+                            }
+                        }
+                    }
+                }
+                .ani-row4{
+                    width: 156px;
+                    float: left;
+                    //方法
+                    .row1-img1{
+                        width: @max-width;
+                        height: @max-width;
+                        position: relative;
+                        .img-info{
+                            display: none;
+                            position: absolute;
+                            width: @max-width;
+                            height: @max-width;
+                            color:#fff;
+                            background:#ff9a6a;
+                            left: 0;
+                            top: 0;
+                            opacity:.7;
+                            filter: alpha(opacity=70);
+                            h5{
+                                padding-top: 14px;
+                                padding-left: 14px;
+                            }
+                            h6{
+                                padding-bottom:5px;
+                                padding-left:14px;
+                                font-weight:800;
+                            }
+                            p{
+                                padding-left: 14px;
+                                font-size:12px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    //最后一个谈话框开始
+    .last-sec-talk{
+        width: 265px;
+        float: right;
+        padding: 5px;
+        background: #fff;
+        border:1px solid #dad8d4;
+        margin-left: 7px;
+        h3{
+            margin-top:7px;
+            margin-left:10px;
+            padding-left: 10px;
+            border-left:4px solid #ff9a6a;
+            font-weight:normal;
+            color:rgb(85,85,85);
+            font-size:24px;
+            margin-bottom: 5px;
+        }
+        ul{
+            height: 270px;
+            overflow:hidden;
+            padding:0 5px;
+            li{
+                width: 255px;
+                background: #f7f7f7;
+                margin-top:7px;
+                .talk-title{
+                    padding:20px 12px;
+                    display: block;
+                    strong{
+                        font-size:14px;
+                        line-height: 18px;
+                        color:#333;
+                    }
+                }
+                .talk-cont{
+                    padding-top: 13px;
+                    border-top:1px dashed #ccc;
+                    a{
+                        padding:0 12px;
+                        display: block;
+                        padding-bottom:10px;
+                        p{
+                            font-size:12px;
+                            line-height: 20px;
+                            height: 40px;
+                            //overflow:hidden;
+                        }
+                        &:hover{
+                            color:orange;
+                        }
+                    }
+                }
+                .talk-back{
+                    span{
+                        font-size:12px;
+                        float: right;
+                        color:#ccc;
+                        margin-top:-28px;
+                        margin-right:12px;
+                    }
+                }
+            }
+        }
+    }
+    //最后一个谈话框结束
+
+}
+//最后一个主要内容区域结束
+
+
+
+
+
+
+

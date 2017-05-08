@@ -1,0 +1,56 @@
+.footer {
+  position: relative;
+  padding-top: 34px;
+  background: #f69057;
+}
+.footer .footer-main {
+  height: 214px;
+  background: url("../images/ac_footer_bg.jpg") no-repeat 50% 0;
+}
+.footer .footer-main .footer-main-cont {
+  width: 1200px;
+  margin: 0 auto;
+}
+.footer .footer-main .footer-main-cont .footer-main-scan {
+  width: 334px;
+  overflow: hidden;
+  padding-bottom: 24px;
+  margin: 0 auto;
+}
+.footer .footer-main .footer-main-cont .footer-main-scan li {
+  float: left;
+  width: 98px;
+  padding: 0 34px;
+  text-align: center;
+  color: #fff;
+}
+.footer .footer-main .footer-main-cont .footer-main-scan li img {
+  width: 74px;
+  height: 74px;
+  margin-bottom: 8px;
+  margin-left: 12px;
+}
+.footer .footer-main .footer-main-cont .footer-main-scan li p {
+  font-size: 12px;
+}
+.footer .footer-main .footer-main-cont .footer-info {
+  line-height: 22px;
+  text-align: center;
+  color: #fff;
+  margin: 0 5px;
+  font-size: 12px;
+}
+.footer .footer-main .footer-main-cont .footer-info a {
+  color: #fff;
+  margin: 0 5px;
+}
+.footer .footer-main .footer-main-cont .footer-info span {
+  padding-left: 10px;
+}
+.footer .footer-border {
+  position: absolute;
+  width: 100%;
+  height: 10px;
+  background: url("../images/ac_global.png") 0 -703px;
+  top: -9px;
+}

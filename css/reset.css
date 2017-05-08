@@ -1,0 +1,32 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+a{
+    text-decoration: none;
+    color:#000;
+}
+ul,ol{
+    list-style: none;
+}
+h1{
+    -webkit-margin-before: 0;
+    -webkit-margin-after: 0;
+}
+input{
+    border:none;
+}
+input:focus,button:focus{
+    outline-style: none;
+}
+button{
+    border:0;
+    cursor:pointer;
+}
+a:active,a:visited{
+    color:#000;
+}
+img{
+    display:block;
+    border-width:0;
+}

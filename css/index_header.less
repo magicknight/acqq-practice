@@ -1,0 +1,303 @@
+@max-width:100%;
+@normal-width:1200px;
+//顶部广告
+.top-advert{
+    width: @max-width;
+    height:90px;
+    background:url('../images/ac_newyear_bg.png');
+    .advert-big{
+        margin: 0 auto;
+        width: @normal-width;
+        height: 90px;
+        position: relative;
+        img{
+            display: block;
+        }
+    }
+}
+//顶部广告结束
+
+//顶部关闭小按钮
+.top-close{
+    width: 100%;
+    position:absolute;
+    top:0;
+    .top-close-sm{
+        width: @normal-width;
+        height: 20px;
+        margin: 0 auto;
+        position: relative;
+        .advert-close-span{
+            position: absolute;
+            cursor:pointer;
+            height: 21px;
+            right:0;
+            top:0;
+            background: rgb(210,54,6);
+            span{
+                vertical-align:top;
+                line-height:21px;
+                font-size:14px;
+                padding-left:5px;
+                color:#fff;
+            }
+            i{
+                display:inline-block;
+                height: @max-width;
+                width: 20px;
+                padding-left: 3px;
+                background:rgb(164,39,0) url(../images/ac_global.png) no-repeat;
+            }
+            .close-before{
+                background-position: -111px -811px;
+            }
+            .close-after{
+                background-position: -82px -811px;
+            }
+        }
+    }
+}
+//顶部关闭小按钮结束
+
+//头部开始
+.header{
+    width:@max-width;
+    background: url(../images/ac_head_bg.png) no-repeat 50% 0;
+    //头部顶部开始
+    .header-top{
+        width:@normal-width;
+        margin: 0 auto;
+        height: 127px;
+        //头部顶部左边
+        .header-top-left{
+            width: 384px;
+            height: 127px;
+            float:left;
+            h1{
+                text-indent:-2000em;
+                a{
+                    display:block;
+                    width: 173px;
+                    height: 95px;
+                    background:url('../images/ac_logo.png');
+                    margin-left:40px;
+                    margin-top:15px;
+                }
+            }
+        //头部顶部左边结束
+        }
+
+        //头部顶部中间开始
+        .header-top-mid{
+            margin-top:32px;
+            width: 466px;
+            float:left;
+            //头部顶部中间搜索框开始
+            .header-search{
+                height: 48px;
+                background: #ece8e6;
+                //中间搜索框开始
+                .header-search-input{
+                    width: 386px;
+                    height: 42px;
+                    border:1px solid #dcd8d4;
+                    position: relative;
+                    float: left;
+                    margin:2px 0px 2px 2px;
+                    label{
+                        color:rgb(153,153,153);
+                        position: absolute;
+                        top:11px;
+                        left:5px;
+                        font-size:14px;
+                    }
+                    input{
+                        width: 376px;
+                        height: 20px;
+                        padding:11px 5px;
+                    }
+                }
+                //中间搜索框结束
+
+                //搜索框旁边btn开始
+                .header-search-btn{
+                    width: 74px;
+                    height: 44px;
+                    float: left;
+                    margin-top: 2px;
+                    background:url("../images/ac_global.png")no-repeat 0 -605px;
+                    &:hover{
+                        background-position:-76px -651px;
+                    }
+                }
+                //搜索框旁边btn结束
+            }
+            //头部顶部中间搜索框结束
+
+            //头部顶部中间推荐开始
+            .header-search-tag{
+                li{
+                    float: left;
+                    font-size:13px;
+                    margin-left:6px;
+                    a {
+                        color: #717171;
+                    }
+                    a:hover{
+                        text-decoration: underline;
+                        color:orange;
+                    }
+                }
+            }
+            //头部顶部中间推荐结束
+
+        }
+        //头部顶部中间结束
+
+    //头部顶部结束
+    }
+    //头部顶部结束
+    //更新小块开始
+    .nav-new{
+        background:url("../images/ac_global.png")no-repeat -164px -329px;
+        position: absolute;
+        width: 25px;
+        height: 11px;
+        display: block;
+        top: 7px;
+        right:8px;
+    }
+    //更新小块结束
+    //头部底部开始
+    .header-bot{
+        width:@max-width;
+        height: 58px;
+        background:url("../images/ac_global.png")repeat-x 0 -77px;
+        .header-bot-nav{
+            width: @normal-width;
+            margin: 0 auto;
+            //顶部header导航栏左边列表开始
+            .header-nav-list{
+                width: 850px;
+                height: 54px;
+                margin-left: 14px;
+                float: left;
+                li{
+                    float: left;
+                    height: 54px;
+                    background:url("../images/ac_global.png")no-repeat right -403px;
+                    margin-left: -16px;
+                    a{
+                        height: 54px;
+                        line-height: 54px;
+                        padding-left:20px;
+                        display: block;
+                        position: relative;
+                        span{
+                            display: block;
+                            height: 54px;
+                            line-height: 54px;
+                            padding-left:6px;
+                            padding-right:27px;
+                            color:#fff;
+                        }
+                    }
+                }
+                .active{
+                    a {
+                        background: url("../images/ac_global.png")no-repeat -30px -140px;
+                    }
+                    span{
+                        background:url("../images/ac_global.png")no-repeat right -140px;
+                    }
+                }
+            }
+            //顶部header导航栏左边列表结束
+
+            //顶部里面定义的小方法开始
+            .aAttr(){
+                font-size:12px;
+                font-weight: 800;
+                color:#7d360f;
+            }
+            .rightBtn(){
+                float: right;
+                display: block;
+                width: 94px;
+                height: 34px;
+                font-size:14px;
+                line-height: 34px;
+                border:1px solid #cc6007;
+                border-radius:2px;
+            }
+            //顶部里面定义的小方法开始
+
+            //顶部header导航栏右边列表开始
+            .header-nav-right{
+                width: 356px;
+                margin-top:12px;
+                margin-left:-20px;
+                float: right;
+                //导航栏右边列表左边开始
+                .header-nav-r-left{
+                    width: 146px;
+                    float: left;
+                    margin-top: 5px;
+                    a{
+                        .aAttr();
+                        position: relative;
+                        .nav-new{
+                            top:-10px;
+                            right: 0;
+                        }
+                    }
+                    span{
+                        .aAttr();
+                        font-weight:200;
+                    }
+                }
+                //导航栏右边列表左边结束
+                .iFunc{
+                    width: 18px;
+                    height: 19px;
+                    margin-left:7px;
+                    margin-top:9px;
+                    display:block;
+                    float: left;
+                }
+                //导航栏右边列表右边小按钮开始
+                .header-nav-f-btn{
+                    .rightBtn();
+                    color:#7d360f;
+                    background: #fbe4bb;
+                    margin-right: 10px;
+                    &:hover{
+                        background: #ffefce;
+                    }
+                    i{
+                        .iFunc();
+                        background:url("../images/ac_global.png")no-repeat -195px -233px;
+                    }
+                }
+                .header-nav-s-btn{
+                    .rightBtn();
+                    color:#fff;
+                    background:#ec5245;
+                    &:hover{
+                        background: #EE1701;
+                    }
+                    i{
+                        .iFunc();
+                        background:url("../images/ac_vip_icon.png")no-repeat -89px 0;
+                        margin-right: 5px;
+                    }
+                }
+                //导航栏右边列表右边小按钮结束
+            }
+            //顶部header导航栏右边列表结束
+
+        }
+    }
+    //头部底部结束
+}
+//头部结束

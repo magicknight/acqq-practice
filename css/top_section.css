@@ -1,0 +1,947 @@
+.main-top-show {
+  width: 100%;
+  background: url("../images/ac_newyear_bg.png") no-repeat 50% 0;
+}
+.main-top-show .main-top-tag {
+  width: 1200px;
+  margin: 0 auto;
+}
+.main-top-show .main-top-tag .main-tag-top {
+  height: 42px;
+  line-height: 42px;
+}
+.main-top-show .main-top-tag .main-tag-top .tag-top-red a {
+  color: #e15a00;
+}
+.main-top-show .main-top-tag .main-tag-top .tag-top-red a:hover {
+  color: orange;
+}
+.main-top-show .main-top-tag .main-tag-top li {
+  float: left;
+  margin-right: 18px;
+}
+.main-top-show .main-top-tag .main-tag-top li a {
+  font-size: 12px;
+  color: #666666;
+}
+.main-top-show .main-top-tag .main-tag-top li a:hover {
+  color: orange;
+}
+.main-top-show .main-top-tag .main-tag-top .tag-top-last {
+  float: right;
+}
+.main-top-show .main-top-tag .main-tag-top .tag-top-last a {
+  display: block;
+  width: 88px;
+  height: 32px;
+  margin-top: 6px;
+  line-height: 32px;
+  border-radius: 2px;
+  border: 1px solid #d4cdc7;
+  background: #f6f6f6;
+}
+.main-top-show .main-top-tag .main-tag-top .tag-top-last a:hover {
+  background: orange;
+  color: #fff;
+}
+.main-top-show .main-top-tag .main-tag-top .tag-top-last a:hover i {
+  background-position: -154px -373px;
+}
+.main-top-show .main-top-tag .main-tag-top .tag-top-last a i {
+  float: left;
+  width: 13px;
+  height: 10px;
+  margin-left: 5px;
+  margin-top: 12px;
+  margin-right: 8px;
+  background: url("../images/ac_global.png") no-repeat -135px -373px;
+}
+.main-top-show .main-top-tag .main-tag-bot {
+  clear: both;
+  height: 27px;
+  line-height: 27px;
+  padding-bottom: 14px;
+}
+.main-top-show .main-top-tag .main-tag-bot span {
+  font-size: 13px;
+}
+.main-top-show .main-top-tag .main-tag-bot .tag-bot-first span {
+  background: url("../images/in_sprite.png") no-repeat -472px -123px;
+  display: block;
+  width: 61px;
+  height: 27px;
+  line-height: 27px;
+  padding-right: 6px;
+  color: #fff;
+  text-align: center;
+}
+.main-top-show .main-top-tag .main-tag-bot li {
+  float: left;
+  padding-right: 20px;
+  line-height: 18px;
+  position: relative;
+}
+.main-top-show .main-top-tag .main-tag-bot li .tag-bot-a {
+  background: url("../images/in_sprite.png") no-repeat -218px -316px;
+  display: block;
+  height: 34px;
+  line-height: 18px;
+  padding-left: 20px;
+  font-size: 13px;
+  margin-top: 6px;
+}
+.main-top-show .main-top-tag .main-tag-bot li .tag-bot-a:hover {
+  color: orange;
+}
+.main-top-show .main-top-tag .main-tag-bot li .tag-bot-info {
+  background: #fff;
+  width: 214px;
+  padding: 14px 14px 0 14px;
+  border: 1px solid #c6c5c5;
+  position: absolute;
+  top: 40px;
+  left: -78px;
+  z-index: 11;
+}
+.main-top-show .main-top-tag .main-tag-bot li .tag-bot-info .tag-info-ico {
+  background: url("../images/in_sprite.png") no-repeat -472px -160px;
+  width: 22px;
+  height: 14px;
+  display: block;
+  position: absolute;
+  top: -14px;
+  left: 87px;
+}
+.main-top-show .main-top-tag .main-tag-bot li .tag-bot-info .tag-info-img {
+  display: block;
+  width: 214px;
+  height: 126px;
+  position: relative;
+}
+.main-top-show .main-top-tag .main-tag-bot li .tag-bot-info .tag-info-img img {
+  width: 214px;
+  height: 126px;
+}
+.main-top-show .main-top-tag .main-tag-bot li .tag-bot-info .tag-info-img .info-ani-big {
+  background: rgba(0, 0, 0, 0.6);
+  display: block;
+  position: absolute;
+  width: 214px;
+  height: 45px;
+  left: 0;
+  bottom: 0;
+}
+.main-top-show .main-top-tag .main-tag-bot li .tag-bot-info .tag-info-img .info-ani-big .info-ani-mes {
+  background: url("../images/in_sprite.png") no-repeat -222px -405px;
+  height: 45px;
+  line-height: 45px;
+  padding-left: 51px;
+  display: block;
+}
+.main-top-show .main-top-tag .main-tag-bot li .tag-bot-info .tag-info-img .info-ani-big .info-ani-mes:hover {
+  background-position: -222px -350px;
+}
+.main-top-show .main-top-tag .main-tag-bot li .tag-bot-info .tag-info-text1 {
+  overflow: hidden;
+  padding-top: 10px;
+}
+.main-top-show .main-top-tag .main-tag-bot li .tag-bot-info .tag-info-text1 .tag-text1-left {
+  height: 22px;
+  line-height: 22px;
+  color: #333;
+  font-size: 18px;
+  float: left;
+}
+.main-top-show .main-top-tag .main-tag-bot li .tag-bot-info .tag-info-text1 .tag-text1-right {
+  height: 22px;
+  line-height: 22px;
+  color: #333;
+  font-size: 14px;
+  font-weight: 800;
+  float: right;
+}
+.main-top-show .main-top-tag .main-tag-bot li .tag-bot-info .tag-info-text1::after {
+  content: '';
+  display: block;
+  clear: both;
+}
+.main-top-show .main-top-tag .main-tag-bot li .tag-bot-info .tag-info-text2 {
+  padding-top: 6px;
+}
+.main-top-show .main-top-tag .main-tag-bot li .tag-bot-info .tag-info-text2 p {
+  line-height: 22px;
+  font-size: 12px;
+}
+.main-top-show .main-top-tag .main-tag-bot li .tag-bot-info .tag-info-li {
+  width: 222px;
+  padding-top: 10px;
+  padding-left: 3px;
+  padding-bottom: 10px;
+  overflow: hidden;
+}
+.main-top-show .main-top-tag .main-tag-bot li .tag-bot-info .tag-info-li li {
+  padding-right: 10px;
+  margin-top: 5px;
+  float: left;
+}
+.main-top-show .main-top-tag .main-tag-bot li .tag-bot-info .tag-info-li a {
+  font-size: 14px;
+}
+.main-top-show .main-banner {
+  width: 1200px;
+  overflow: hidden;
+  clear: both;
+  margin: 0 auto;
+}
+.main-top-show .main-banner .main-blur-banner {
+  width: 912px;
+  float: left;
+  overflow: hidden;
+}
+.main-top-show .main-banner .main-blur-banner .main-view-banner {
+  height: 356px;
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+}
+.main-top-show .main-banner .main-blur-banner .main-view-banner ul {
+  position: relative;
+}
+.main-top-show .main-banner .main-blur-banner .main-view-banner ul li {
+  height: 356px;
+}
+.main-top-show .main-banner .main-blur-banner .main-view-banner .ban-left-btn {
+  width: 30px;
+  height: 100px;
+  background: url('../images/in_sprite.png') no-repeat;
+  display: block;
+  position: absolute;
+  top: 140px;
+  z-index: 8;
+  cursor: pointer;
+  background-position: 0 -459px;
+  left: 0;
+}
+.main-top-show .main-banner .main-blur-banner .main-view-banner .ban-right-btn {
+  width: 30px;
+  height: 100px;
+  background: url('../images/in_sprite.png') no-repeat;
+  display: block;
+  position: absolute;
+  top: 140px;
+  z-index: 8;
+  cursor: pointer;
+  background-position: -31px -459px;
+  right: 0;
+}
+.main-top-show .main-banner .main-blur-banner .main-view-banner .lunbof1 {
+  position: absolute;
+  display: block;
+  top: 0;
+  left: 0;
+}
+.main-top-show .main-banner .main-blur-banner .main-view-banner .lunbof1 .lunbof1-name {
+  height: 30px;
+  line-height: 30px;
+  color: #fff;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  background-color: #f1823a;
+}
+.main-top-show .main-banner .main-blur-banner .main-view-banner .lunbof1 .lunbof1-name .lunbof1-icon {
+  width: 7px;
+  height: 30px;
+  position: absolute;
+  top: 0;
+  right: -7px;
+  background: url("../images/in_sprite.png") no-repeat -482px -206px;
+}
+.main-top-show .main-banner .main-blur-banner .main-view-banner .lunbof2 {
+  position: absolute;
+  display: block;
+  top: 212px;
+  left: 0;
+}
+.main-top-show .main-banner .main-blur-banner .main-view-banner .lunbof2 .lunbof2-name {
+  height: 30px;
+  line-height: 30px;
+  color: #fff;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  background-color: #7fc63a;
+}
+.main-top-show .main-banner .main-blur-banner .main-view-banner .lunbof2 .lunbof2-name .lunbof2-icon {
+  width: 7px;
+  height: 30px;
+  position: absolute;
+  top: 0;
+  right: -7px;
+  background: url("../images/in_sprite.png") no-repeat -499px -206px;
+}
+.main-top-show .main-banner .main-blur-banner .main-view-banner .lunbof3 {
+  position: absolute;
+  display: block;
+  top: 0;
+  left: 353px;
+}
+.main-top-show .main-banner .main-blur-banner .main-view-banner .lunbof3 .lunbof3-name {
+  height: 30px;
+  line-height: 30px;
+  color: #fff;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  background-color: #5fa3ea;
+}
+.main-top-show .main-banner .main-blur-banner .main-view-banner .lunbof3 .lunbof3-name .lunbof3-icon {
+  width: 7px;
+  height: 30px;
+  position: absolute;
+  top: 0;
+  right: -7px;
+  background: url("../images/in_sprite.png") no-repeat -528px -206px;
+}
+.main-top-show .main-banner .main-blur-banner .main-view-banner .lunbof4 {
+  position: absolute;
+  display: block;
+  top: 0;
+  left: 622px;
+}
+.main-top-show .main-banner .main-blur-banner .main-view-banner .lunbof4 .lunbof4-name {
+  height: 30px;
+  line-height: 30px;
+  color: #fff;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  background-color: #f9ba49;
+}
+.main-top-show .main-banner .main-blur-banner .main-view-banner .lunbof4 .lunbof4-name .lunbof4-icon {
+  width: 7px;
+  height: 30px;
+  position: absolute;
+  top: 0;
+  right: -7px;
+  background: url("../images/in_sprite.png") no-repeat -514px -206px;
+}
+.main-top-show .main-banner .main-blur-banner .main-view-banner .lunbof5 {
+  position: absolute;
+  display: block;
+  top: 175px;
+  left: 622px;
+}
+.main-top-show .main-banner .main-blur-banner .main-view-banner .lunbof5 .lunbof5-name {
+  height: 30px;
+  line-height: 30px;
+  color: #fff;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  background-color: #f1823a;
+}
+.main-top-show .main-banner .main-blur-banner .main-view-banner .lunbof5 .lunbof5-name .lunbof5-icon {
+  width: 7px;
+  height: 30px;
+  position: absolute;
+  top: 0;
+  right: -7px;
+  background: url("../images/in_sprite.png") no-repeat -482px -206px;
+}
+.main-top-show .main-banner .main-blur-banner .main-view-banner .lunbos1 {
+  position: absolute;
+  display: block;
+  top: 0;
+  left: 0;
+}
+.main-top-show .main-banner .main-blur-banner .main-view-banner .lunbos1 .lunbos1-name {
+  height: 30px;
+  line-height: 30px;
+  color: #fff;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  background-color: #f1823a;
+}
+.main-top-show .main-banner .main-blur-banner .main-view-banner .lunbos1 .lunbos1-name .lunbos1-icon {
+  width: 7px;
+  height: 30px;
+  position: absolute;
+  top: 0;
+  right: -7px;
+  background: url("../images/in_sprite.png") no-repeat -482px -206px;
+}
+.main-top-show .main-banner .main-blur-banner .main-view-banner .lunbos2 {
+  position: absolute;
+  display: block;
+  top: 0;
+  left: 373px;
+}
+.main-top-show .main-banner .main-blur-banner .main-view-banner .lunbos2 .lunbos2-name {
+  height: 30px;
+  line-height: 30px;
+  color: #fff;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  background-color: #7fc63a;
+}
+.main-top-show .main-banner .main-blur-banner .main-view-banner .lunbos2 .lunbos2-name .lunbos2-icon {
+  width: 7px;
+  height: 30px;
+  position: absolute;
+  top: 0;
+  right: -7px;
+  background: url("../images/in_sprite.png") no-repeat -499px -206px;
+}
+.main-top-show .main-banner .main-blur-banner .main-view-banner .lunbos3 {
+  position: absolute;
+  display: block;
+  top: 184px;
+  left: 373px;
+}
+.main-top-show .main-banner .main-blur-banner .main-view-banner .lunbos3 .lunbos3-name {
+  height: 30px;
+  line-height: 30px;
+  color: #fff;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  background-color: #f9ba49;
+}
+.main-top-show .main-banner .main-blur-banner .main-view-banner .lunbos3 .lunbos3-name .lunbos3-icon {
+  width: 7px;
+  height: 30px;
+  position: absolute;
+  top: 0;
+  right: -7px;
+  background: url("../images/in_sprite.png") no-repeat -514px -206px;
+}
+.main-top-show .main-banner .main-blur-banner .main-view-banner .lunbos4 {
+  position: absolute;
+  display: block;
+  top: 0;
+  left: 690px;
+}
+.main-top-show .main-banner .main-blur-banner .main-view-banner .lunbos4 .lunbos4-name {
+  height: 30px;
+  line-height: 30px;
+  color: #fff;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  background-color: #5fa3ea;
+}
+.main-top-show .main-banner .main-blur-banner .main-view-banner .lunbos4 .lunbos4-name .lunbos4-icon {
+  width: 7px;
+  height: 30px;
+  position: absolute;
+  top: 0;
+  right: -7px;
+  background: url("../images/in_sprite.png") no-repeat -528px -206px;
+}
+.main-top-show .main-banner .main-blur-banner .main-view-banner .lunbos5 {
+  position: absolute;
+  display: block;
+  top: 184px;
+  left: 609px;
+}
+.main-top-show .main-banner .main-blur-banner .main-view-banner .lunbos5 .lunbos5-name {
+  height: 30px;
+  line-height: 30px;
+  color: #fff;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  background-color: #7fc63a;
+}
+.main-top-show .main-banner .main-blur-banner .main-view-banner .lunbos5 .lunbos5-name .lunbos5-icon {
+  width: 7px;
+  height: 30px;
+  position: absolute;
+  top: 0;
+  right: -7px;
+  background: url("../images/in_sprite.png") no-repeat -499px -206px;
+}
+.main-top-show .main-banner .main-blur-banner .main-view-banner .lunbot1 {
+  position: absolute;
+  display: block;
+  top: 0;
+  left: 0;
+}
+.main-top-show .main-banner .main-blur-banner .main-view-banner .lunbot1 .lunbot1-name {
+  height: 30px;
+  line-height: 30px;
+  color: #fff;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  background-color: #f1823a;
+}
+.main-top-show .main-banner .main-blur-banner .main-view-banner .lunbot1 .lunbot1-name .lunbot1-icon {
+  width: 7px;
+  height: 30px;
+  position: absolute;
+  top: 0;
+  right: -7px;
+  background: url("../images/in_sprite.png") no-repeat -482px -206px;
+}
+.main-top-show .main-banner .main-blur-banner .main-view-banner .lunbot2 {
+  position: absolute;
+  display: block;
+  top: 0;
+  left: 229px;
+}
+.main-top-show .main-banner .main-blur-banner .main-view-banner .lunbot2 .lunbot2-name {
+  height: 30px;
+  line-height: 30px;
+  color: #fff;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  background-color: #7fc63a;
+}
+.main-top-show .main-banner .main-blur-banner .main-view-banner .lunbot2 .lunbot2-name .lunbot2-icon {
+  width: 7px;
+  height: 30px;
+  position: absolute;
+  top: 0;
+  right: -7px;
+  background: url("../images/in_sprite.png") no-repeat -499px -206px;
+}
+.main-top-show .main-banner .main-blur-banner .main-view-banner .lunbot3 {
+  position: absolute;
+  display: block;
+  top: 0;
+  left: 458px;
+}
+.main-top-show .main-banner .main-blur-banner .main-view-banner .lunbot3 .lunbot3-name {
+  height: 30px;
+  line-height: 30px;
+  color: #fff;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  background-color: #5fa3ea;
+}
+.main-top-show .main-banner .main-blur-banner .main-view-banner .lunbot3 .lunbot3-name .lunbot3-icon {
+  width: 7px;
+  height: 30px;
+  position: absolute;
+  top: 0;
+  right: -7px;
+  background: url("../images/in_sprite.png") no-repeat -528px -206px;
+}
+.main-top-show .main-banner .main-blur-banner .main-view-banner .lunbot4 {
+  position: absolute;
+  display: block;
+  top: 0;
+  left: 687px;
+}
+.main-top-show .main-banner .main-blur-banner .main-view-banner .lunbot4 .lunbot4-name {
+  height: 30px;
+  line-height: 30px;
+  color: #fff;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  background-color: #f9ba49;
+}
+.main-top-show .main-banner .main-blur-banner .main-view-banner .lunbot4 .lunbot4-name .lunbot4-icon {
+  width: 7px;
+  height: 30px;
+  position: absolute;
+  top: 0;
+  right: -7px;
+  background: url("../images/in_sprite.png") no-repeat -514px -206px;
+}
+.main-top-show .main-banner .main-blur-banner .main-view-lo {
+  width: 912px;
+  height: 5px;
+  background: #5fa3ea;
+  position: relative;
+}
+.main-top-show .main-banner .main-blur-banner .main-view-lo .main-control-lo {
+  width: 0px;
+  height: 5px;
+  background: #f9ba49;
+}
+.main-top-show .main-banner .main-right-rank {
+  width: 257px;
+  height: 357px;
+  margin-bottom: 24px;
+  padding-top: 3px;
+  padding-left: 12px;
+  padding-right: 12px;
+  background: url("../images/in_sprite.png") no-repeat -544px 0;
+  float: right;
+}
+.main-top-show .main-banner .main-right-rank .right-rank-show {
+  float: left;
+}
+.main-top-show .main-banner .main-right-rank .right-rank-name h2 {
+  color: #ff9a6a;
+  width: 90px;
+  font-size: 18px;
+  line-height: 48px;
+  font-weight: 400;
+  float: left;
+}
+.main-top-show .main-banner .main-right-rank .right-rank-name .right-rank-li .active a {
+  border-color: #ff9a6a;
+}
+.main-top-show .main-banner .main-right-rank .right-rank-name .right-rank-li li {
+  float: left;
+  margin-left: 12px;
+  font-size: 18px;
+  height: 46px;
+  line-height: 46px;
+}
+.main-top-show .main-banner .main-right-rank .right-rank-name .right-rank-li li a {
+  display: block;
+  width: 42px;
+  color: #fff;
+  text-align: center;
+  border-bottom: 3px solid #373533;
+}
+.main-top-show .main-banner .main-right-rank .right-rank-name .right-rank-li::after {
+  content: '';
+  display: block;
+  clear: both;
+}
+.main-top-show .main-banner .main-right-rank .right-rank-tab1 {
+  height: 212px;
+  margin-top: 22px;
+  overflow: hidden;
+}
+.main-top-show .main-banner .main-right-rank .right-rank-tab1 li {
+  clear: both;
+  width: 122px;
+  height: 18px;
+  margin-bottom: 8px;
+}
+.main-top-show .main-banner .main-right-rank .right-rank-tab1 .tab1-top10 {
+  float: left;
+}
+.main-top-show .main-banner .main-right-rank .right-rank-tab1 .fr {
+  float: right;
+}
+.main-top-show .main-banner .main-right-rank .right-rank-tab1 .tab1-top10 {
+  font-size: 12px;
+}
+.main-top-show .main-banner .main-right-rank .right-rank-tab1 .tab1-top10 .rank-in-orange {
+  color: #fff;
+  background: #ff9a6a;
+  border: 1px solid #393939;
+  padding: 0 3px;
+  margin-right: 10px;
+  float: left;
+}
+.main-top-show .main-banner .main-right-rank .right-rank-tab1 .tab1-top10 a {
+  float: left;
+  color: #cfcfcf;
+}
+.main-top-show .main-banner .main-right-rank .right-rank-tab1 .tab1-top10 a:hover {
+  color: #fff;
+}
+.main-top-show .main-banner .main-right-rank .right-rank-tab1 .tab1-top10 .rankup {
+  float: right;
+  width: 5px;
+  height: 6px;
+  background: url("../images/ac_global.png") no-repeat -199px -200px;
+  margin-top: 6px;
+}
+.main-top-show .main-banner .main-right-rank .right-rank-tab2 {
+  height: 212px;
+  margin-top: 22px;
+  overflow: hidden;
+}
+.main-top-show .main-banner .main-right-rank .right-rank-tab2 li {
+  clear: both;
+  width: 122px;
+  height: 18px;
+  margin-bottom: 8px;
+}
+.main-top-show .main-banner .main-right-rank .right-rank-tab2 .tab1-top10 {
+  float: left;
+}
+.main-top-show .main-banner .main-right-rank .right-rank-tab2 .fr {
+  float: right;
+}
+.main-top-show .main-banner .main-right-rank .right-rank-tab2 .tab1-top10 {
+  font-size: 12px;
+}
+.main-top-show .main-banner .main-right-rank .right-rank-tab2 .tab1-top10 .rank-in-orange {
+  color: #fff;
+  background: #ff9a6a;
+  border: 1px solid #393939;
+  padding: 0 3px;
+  margin-right: 10px;
+  float: left;
+}
+.main-top-show .main-banner .main-right-rank .right-rank-tab2 .tab1-top10 a {
+  float: left;
+  color: #cfcfcf;
+}
+.main-top-show .main-banner .main-right-rank .right-rank-tab2 .tab1-top10 a:hover {
+  color: #fff;
+}
+.main-top-show .main-banner .main-right-rank .right-rank-tab2 .tab1-top10 .rankup {
+  float: right;
+  width: 5px;
+  height: 6px;
+  background: url("../images/ac_global.png") no-repeat -199px -200px;
+  margin-top: 6px;
+}
+.main-top-show .main-banner .main-right-rank .right-rank-tab3 {
+  height: 212px;
+  margin-top: 22px;
+  overflow: hidden;
+}
+.main-top-show .main-banner .main-right-rank .right-rank-tab3 li {
+  clear: both;
+  width: 122px;
+  height: 18px;
+  margin-bottom: 8px;
+}
+.main-top-show .main-banner .main-right-rank .right-rank-tab3 .tab1-top10 {
+  float: left;
+}
+.main-top-show .main-banner .main-right-rank .right-rank-tab3 .fr {
+  float: right;
+}
+.main-top-show .main-banner .main-right-rank .right-rank-tab3 .tab1-top10 {
+  font-size: 12px;
+}
+.main-top-show .main-banner .main-right-rank .right-rank-tab3 .tab1-top10 .rank-in-orange {
+  color: #fff;
+  background: #ff9a6a;
+  border: 1px solid #393939;
+  padding: 0 3px;
+  margin-right: 10px;
+  float: left;
+}
+.main-top-show .main-banner .main-right-rank .right-rank-tab3 .tab1-top10 a {
+  float: left;
+  color: #cfcfcf;
+}
+.main-top-show .main-banner .main-right-rank .right-rank-tab3 .tab1-top10 a:hover {
+  color: #fff;
+}
+.main-top-show .main-banner .main-right-rank .right-rank-tab3 .tab1-top10 .rankup {
+  float: right;
+  width: 5px;
+  height: 6px;
+  background: url("../images/ac_global.png") no-repeat -199px -200px;
+  margin-top: 6px;
+}
+.main-top-show .main-banner .main-right-rank .right-rank-line {
+  height: 0;
+  width: 100%;
+  border-bottom: 2px dashed #474747;
+}
+.main-top-show .main-banner .main-right-rank .right-rank-recommend li {
+  float: left;
+  width: 118px;
+  height: 18px;
+  line-height: 18px;
+  padding-top: 10px;
+  margin-right: 10px;
+}
+.main-top-show .main-banner .main-right-rank .right-rank-recommend li i {
+  width: 17px;
+  height: 16px;
+  float: left;
+  background: url('../images/ac_global.png') no-repeat -151px -200px;
+}
+.main-top-show .main-banner .main-right-rank .right-rank-recommend li a {
+  color: #ffca68;
+  font-size: 12px;
+  float: left;
+  margin-left: 5px;
+}
+.main-top-show .main-banner .main-right-rank .right-rank-recommend li a:hover {
+  color: #fff;
+}
+.main-top-show .main-banner .main-right-rank::after {
+  content: '';
+  display: block;
+  clear: both;
+}
+.main-top-new {
+  width: 1198px;
+  margin: 0 auto;
+  margin-bottom: 22px;
+  border-radius: 2px;
+  border: 1px solid #cccaca;
+  background-color: #fff;
+  overflow: hidden;
+}
+.main-top-new .top-new-left {
+  float: left;
+  width: 588px;
+  padding: 10px 0 10px 10px;
+  border-right: 1px dashed #dcd8d5;
+  overflow: hidden;
+}
+.main-top-new .top-new-left .new-title {
+  width: 31px;
+  height: 45px;
+  padding-top: 10px;
+  padding-left: 12px;
+  padding-right: 18px;
+  border-radius: 2px;
+  font-size: 14px;
+  color: #fff;
+  float: left;
+  background: url(../images/in_sprite.png) no-repeat -358px -123px;
+}
+.main-top-new .top-new-left dd {
+  width: 508px;
+  height: 26px;
+  line-height: 26px;
+  float: left;
+}
+.main-top-new .top-new-left dd .new-name {
+  font-size: 12px;
+  width: 128px;
+  color: #333;
+  background: url("../images/in_sprite.png") no-repeat -218px -311px;
+  padding-left: 20px;
+  float: left;
+  margin-left: 10px;
+}
+.main-top-new .top-new-left dd span {
+  float: left;
+  font-size: 12px;
+  font-weight: 800;
+}
+.main-top-new .top-new-left dd .new-li {
+  font-size: 12px;
+  margin: 0 10px;
+  color: #333;
+  float: left;
+}
+.main-top-advert {
+  width: 1200px;
+  height: 90px;
+  margin: 0 auto;
+  margin-bottom: 40px;
+}
+.main-top-strong {
+  width: 1200px;
+  margin: 0 auto;
+  padding-top: 20px;
+  margin-bottom: 40px;
+}
+.main-top-strong .strong-title-line {
+  border-top: 2px solid #ff9a6a;
+  margin-bottom: 15px;
+}
+.main-top-strong .strong-title-line .title-name {
+  margin-top: -18px;
+  padding-right: 24px;
+  color: #555;
+  font-size: 30px;
+  line-height: 30px;
+  font-weight: normal;
+  width: 130px;
+  float: left;
+  background: url("../images/ac_body_bg.png") no-repeat;
+}
+.main-top-strong .strong-title-line .title-name em {
+  font-style: normal;
+  font-size: 24px;
+  color: #ff9a6a;
+}
+.main-top-strong .strong-title-line .top-strong-btn {
+  margin-top: -18px;
+  float: left;
+  width: 74px;
+  height: 10px;
+  margin-left: 443px;
+  padding: 10px 0 10px 10px;
+  background: url("../images/ac_body_bg.png") no-repeat;
+}
+.main-top-strong .strong-title-line .top-strong-btn a {
+  width: 12px;
+  height: 12px;
+  border-radius: 12px;
+  background: #e5e3e1;
+  float: left;
+  margin: 0 5px;
+}
+.main-top-strong .strong-title-line .top-strong-btn .active {
+  background: #555;
+}
+.main-top-strong .strong-title-line .top-strong-btn::after {
+  content: '';
+  display: block;
+  clear: both;
+}
+.main-top-strong .top-strong-show {
+  width: 1200px;
+  margin: 0 auto;
+  height: 252px;
+  position: relative;
+  overflow: hidden;
+}
+.main-top-strong .top-strong-show .strong-show-li {
+  padding: 10px;
+  position: absolute;
+  left: 0;
+  overflow: hidden;
+  width: 3600px;
+}
+.main-top-strong .top-strong-show .strong-show-li li {
+  float: left;
+  margin-right: 14px;
+  width: 135px;
+  overflow: hidden;
+}
+.main-top-strong .top-strong-show .strong-show-li li .strong-img-a {
+  width: 133px;
+  border: 1px solid #bebebe;
+  display: block;
+  position: relative;
+}
+.main-top-strong .top-strong-show .strong-show-li li .strong-img-a p {
+  position: absolute;
+  width: 100%;
+  height: 22px;
+  bottom: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.6);
+  display: block;
+}
+.main-top-strong .top-strong-show .strong-show-li li .strong-img-a p span {
+  font-size: 12px;
+  color: #fff;
+  float: right;
+  line-height: 22px;
+  padding: 0 10px;
+}
+.main-top-strong .top-strong-show .strong-show-li li .strong-img-a:hover {
+  border-color: orange;
+}
+.main-top-strong .top-strong-show .strong-show-li li h5 {
+  font-weight: normal;
+  margin-top: 4px;
+}
+.main-top-strong .top-strong-show .strong-show-li li h5 a {
+  font-size: 14px;
+  color: #333;
+}
+.main-top-strong .top-strong-show .strong-show-li li h5 a:hover {
+  color: orange;
+}
+.main-top-strong .top-strong-show .strong-show-li li .strong-det {
+  color: #999;
+  height: 22px;
+  line-height: 22px;
+  font-size: 13px;
+}
+.main-top-strong .top-strong-show .strong-show-li li .strong-det a:hover {
+  color: orange;
+}
