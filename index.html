@@ -9,6 +9,7 @@
     <script src="./js/jquery-1.12.4.min.js"></script>
     <script src="./js/JSONdate.js"></script>
     <script src="./js/func.js"></script>
+    <script src="./js/echo.min.js"></script>
 </head>
 <body>
     <!--模态框-->
@@ -753,7 +754,7 @@
         <!--上边第三块广告块开始-->
         <div class="main-top-advert">
             <a href="#">
-                <img src="./images/advert01.jpg" alt="">
+                <img src="" data-echo="./images/advert01.jpg" alt="">
             </a>
         </div>
         <!--上边第三块广告块结束-->
@@ -777,7 +778,7 @@
                     <li>
                         <a href="#" class="strong-img-a">
                             <!--遍历的图片-->
-                            <img src="./images/strong1.jpg">
+                            <img src="" data-echo="./images/strong1.jpg">
                             <p>
                                 <span>更新至99话</span>
                             </p>
@@ -796,7 +797,7 @@
                 <!--遍历小方法开始-->
                 <script>
                     for(var i=0;i<23;i++){
-                        $('#strong-show-li').append('<li> <a href="#" class="strong-img-a"> <img src="./images/strong'+strongLi.imgId[i]+'.jpg"> <p> <span>更新至99话</span> </p> </a> <h5><a href="#">'+strongLi.liName[i]+'</a></h5> <p class="strong-det">'+strongLi.liDet[i]+'</p> <p class="strong-det"> <a href="#">搞笑</a> <a href="#">热血</a> <a href="#">校园</a> </p> </li>')
+                        $('#strong-show-li').append('<li> <a href="#" class="strong-img-a"> <img src="" data-echo="./images/strong'+strongLi.imgId[i]+'.jpg"> <p> <span>更新至99话</span> </p> </a> <h5><a href="#">'+strongLi.liName[i]+'</a></h5> <p class="strong-det">'+strongLi.liDet[i]+'</p> <p class="strong-det"> <a href="#">搞笑</a> <a href="#">热血</a> <a href="#">校园</a> </p> </li>')
                     }
                     $('#top-strong-btn a').click(function(){
                         move($('#strong-show-li')[0],($(this).index())*(-1190));
@@ -851,10 +852,10 @@
                 <!--js切换小方法开始-->
                 <script>
                     for(var i=0;i<5;i++){
-                        $('#vip-fl-show').append('<li> <a href="#" class="strong-img-a"> <img src="./images/strong'+strongLi.imgId[i]+'.jpg"> <p> <span>更新至99话</span> </p> </a> <h5><a href="#">'+strongLi.liName[i]+'</a></h5> <p class="strong-det">'+strongLi.liDet[i]+'</p> <p class="strong-det"> <a href="#">搞笑</a> <a href="#">热血</a> <a href="#">校园</a> </p> </li>')
+                        $('#vip-fl-show').append('<li> <a href="#" class="strong-img-a"> <img src="" data-echo="./images/strong'+strongLi.imgId[i]+'.jpg"> <p> <span>更新至99话</span> </p> </a> <h5><a href="#">'+strongLi.liName[i]+'</a></h5> <p class="strong-det">'+strongLi.liDet[i]+'</p> <p class="strong-det"> <a href="#">搞笑</a> <a href="#">热血</a> <a href="#">校园</a> </p> </li>')
                     }
                     for(var i=10;i<15;i++){
-                        $('#vip-fl-show2').append('<li> <a href="#" class="strong-img-a"> <img src="./images/strong'+strongLi.imgId[i]+'.jpg"> <p> <span>更新至99话</span> </p> </a> <h5><a href="#">'+strongLi.liName[i]+'</a></h5> <p class="strong-det">'+strongLi.liDet[i]+'</p> <p class="strong-det"> <a href="#">搞笑</a> <a href="#">热血</a> <a href="#">校园</a> </p> </li>')
+                        $('#vip-fl-show2').append('<li> <a href="#" class="strong-img-a"> <img src="" data-echo="./images/strong'+strongLi.imgId[i]+'.jpg"> <p> <span>更新至99话</span> </p> </a> <h5><a href="#">'+strongLi.liName[i]+'</a></h5> <p class="strong-det">'+strongLi.liDet[i]+'</p> <p class="strong-det"> <a href="#">搞笑</a> <a href="#">热血</a> <a href="#">校园</a> </p> </li>')
                     }
 
 
@@ -914,7 +915,7 @@
                 <!--遍历方法开始-->
                 <script>
                     for(var i=17;i<22;i++){
-                        $('#vip-fl-show2-1').append('<li> <a href="#" class="strong-img-a"> <img src="./images/strong'+strongLi.imgId[i]+'.jpg"> <p> <span>更新至99话</span> </p> </a> <h5><a href="#">'+strongLi.liName[i]+'</a></h5> <p class="strong-det">'+strongLi.liDet[i]+'</p></li>')
+                        $('#vip-fl-show2-1').append('<li> <a href="#" class="strong-img-a"> <img src="" data-echo="./images/strong'+strongLi.imgId[i]+'.jpg"> <p> <span>更新至99话</span> </p> </a> <h5><a href="#">'+strongLi.liName[i]+'</a></h5> <p class="strong-det">'+strongLi.liDet[i]+'</p></li>')
                     }
                 </script>
                 <!--遍历方法结束-->
@@ -927,9 +928,9 @@
                     </div>
                     <div class="vip-sec-smm">
                         <ul id="vip-sec-smm">
-                            <li style="display: block"><a href="#"><img src="./images/smlunbo1.jpg" alt=""></a></li>
-                            <li><a href="#"><img src="./images/smlunbo2.jpg" alt=""></a></li>
-                            <li><a href="#"><img src="./images/smlunbo3.jpg" alt=""></a></li>
+                            <li style="display: block"><a href="#"><img src="" data-echo="./images/smlunbo1.jpg" alt=""></a></li>
+                            <li><a href="#"><img src="" data-echo="./images/smlunbo2.jpg" alt=""></a></li>
+                            <li><a href="#"><img src="" data-echo="./images/smlunbo3.jpg" alt=""></a></li>
 
                         </ul>
                     </div>
@@ -958,11 +959,11 @@
         <!--中间五合一广告开始-->
         <div class="main-mid-adv">
             <ul>
-                <li><a href="#"><img src="./images/adv1.jpg" alt=""></a></li>
-                <li><a href="#"><img src="./images/adv2.jpg" alt=""></a></li>
-                <li><a href="#"><img src="./images/adv3.jpg" alt=""></a></li>
-                <li><a href="#"><img src="./images/adv4.jpg" alt=""></a></li>
-                <li><a href="#"><img src="./images/adv5.jpg" alt=""></a></li>
+                <li><a href="#"><img src="" data-echo="./images/adv1.jpg" alt=""></a></li>
+                <li><a href="#"><img src="" data-echo="./images/adv2.jpg" alt=""></a></li>
+                <li><a href="#"><img src="" data-echo="./images/adv3.jpg" alt=""></a></li>
+                <li><a href="#"><img src="" data-echo="./images/adv4.jpg" alt=""></a></li>
+                <li><a href="#"><img src="" data-echo="./images/adv5.jpg" alt=""></a></li>
             </ul>
         </div>
         <!--中间五合一广告结束-->
@@ -977,7 +978,7 @@
                     <div class="lnov-big-img">
                         <a href="#">
                             <!--图片数据-->
-                            <img src="./images/novb1.jpg" id="lnov-big-img">
+                            <img src="" data-echo="./images/novb1.jpg" id="lnov-big-img">
                         </a>
                     </div>
                 </div>
@@ -996,7 +997,7 @@
                     </div>
                     <div class="lnov-data-li" id="lnov-data-li">
                         <ul>
-                            <li class="active"><a href="#"><img src="./images/novs1.jpg"></a></li>
+                            <li class="active"><a href="#"><img src="" data-echo="./images/novs1.jpg"></a></li>
                         </ul>
                     </div>
                 </div>
@@ -1006,7 +1007,7 @@
         <script>
             var novNum;
             for(var i=0;i<7;i++){
-                $('#lnov-data-li ul').append('<li><a href="xiana.html"><img src="./images/novs'+(i+2)+'.jpg"></a></li>');
+                $('#lnov-data-li ul').append('<li><a href="xiana.html"><img src="" data-echo="./images/novs'+(i+2)+'.jpg"></a></li>');
             }
             $('#lnov-data-li ul li').mouseenter(function(){
                 novNum=$(this).index();
@@ -1032,7 +1033,7 @@
                         <ul>
                             <li class="ani-row1">
                                 <div class="row1-img1">
-                                    <a href="#"><img src="./images/fo1.png"></a>
+                                    <a href="#"><img src="" data-echo="./images/fo1.png"></a>
                                     <a href="#" class="img-info">
                                         <h5>凯瑟琳的环游日记</h5>
                                         <h6>作者：制帽匠</h6>
@@ -1042,7 +1043,7 @@
                             </li>
                             <li class="ani-row2">
                                 <div class="row1-img1">
-                                    <a href="#"><img src="./images/fo2.png"></a>
+                                    <a href="#"><img src="" data-echo="./images/fo2.png"></a>
                                     <a href="#" class="img-info">
                                         <h5>PanPan便利店</h5>
                                         <h6>作者：黑白格仔君</h6>
@@ -1050,7 +1051,7 @@
                                     </a>
                                 </div>
                                 <div class="row1-img1">
-                                    <a href="#"><img src="./images/fo3.png"></a>
+                                    <a href="#"><img src="" data-echo="./images/fo3.png"></a>
                                     <a href="#" class="img-info">
                                         <h5>糊涂教室</h5>
                                         <h6>作者：木子是个球儿</h6>
@@ -1060,7 +1061,7 @@
                             </li>
                             <li class="ani-row3">
                                 <div class="row1-img1">
-                                    <a href="#"><img src="./images/fo4.png"></a>
+                                    <a href="#"><img src="" data-echo="./images/fo4.png"></a>
                                     <a href="#" class="img-info">
                                         <h5>你好，小雷君！</h5>
                                         <h6>作者：有喵小姐</h6>
@@ -1070,7 +1071,7 @@
                             </li>
                             <li class="ani-row4">
                                 <div class="row1-img1">
-                                    <a href="#"><img src="./images/fo5.png"></a>
+                                    <a href="#"><img src="" data-echo="./images/fo5.png"></a>
                                     <a href="#" class="img-info">
                                         <h5>小桃额娘</h5>
                                         <h6>作者：小桃额娘</h6>
@@ -1078,7 +1079,7 @@
                                     </a>
                                 </div>
                                 <div class="row1-img1">
-                                    <a href="#"><img src="./images/fo6.png"></a>
+                                    <a href="#"><img src="" data-echo="./images/fo6.png"></a>
                                     <a href="#" class="img-info">
                                         <h5>妖怪列传</h5>
                                         <h6>作者：镭暴漫画</h6>
@@ -1141,7 +1142,7 @@
         <!--最后一块广告块开始-->
         <div class="main-top-advert">
             <a href="#">
-                <img src="./images/0.jpg" alt="">
+                <img src="" data-echo="./images/0.jpg" alt="">
             </a>
         </div>
         <!--最后一块广告块结束-->
@@ -1154,11 +1155,11 @@
                     <!--底部二维码开始-->
                     <ul class="footer-main-scan">
                         <li>
-                            <img src="./images/ac_qr_img.jpg">
+                            <img src="" data-echo="./images/ac_qr_img.jpg">
                             <p>腾讯动漫客户端</p>
                         </li>
                         <li>
-                            <img src="./images/ac_wx_img.jpg">
+                            <img src="" data-echo="./images/ac_wx_img.jpg">
                             <p>腾讯动漫微信</p>
                         </li>
                     </ul>
@@ -1189,8 +1190,14 @@
         <!--底部结束-->
 
 
-
-
     </div>
+    <!--懒加载-->
+    <script>
+        Echo.init({
+            offset:0,  //离可视区域多少像素的图片可以被加载
+            throttle:0  //图片延时多少毫秒加载
+        });
+    </script>
+
 </body>
 </html>
