@@ -8,3 +8,14 @@
 主要依赖jQuery来实现
 
 图片使用echo.js懒加载插件
+
+# 修改
+使用了webpack对项目进行打包压缩
+
+###### 开启项目：
+```
+npm run dev
+```
+###### 直接打开打包好的文件：
+打开index_pro.html文件
+distdoc文件夹为已经打包好的文件
