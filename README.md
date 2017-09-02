@@ -19,3 +19,6 @@ npm run dev
 ###### 直接打开打包好的文件：
 打开index_pro.html文件
 distdoc文件夹为已经打包好的文件
+
+###### 详细配置介绍
+http://www.jianshu.com/p/74187923e7e9
